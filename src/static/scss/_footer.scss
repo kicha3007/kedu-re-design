@@ -1,0 +1,205 @@
+// Kedu.ru footer styles
+
+footer {
+	padding: 30px 0;
+	border-top: 1px solid $link-line-solid;
+	background: $bg-content-block;
+	
+	line-height: 1.5em;
+	
+	.footer {
+		&__links a,
+		&__copyright a,
+		&__soc a,
+		&__smi a {
+			@include link-hover();
+			
+			color: $link-footer-color;
+			font-size: 12px;
+			font-weight: 300;
+		}
+		&__links:last-of-type {
+			margin-bottom: 20px;
+		}
+		&__links {
+			margin-bottom: 5px;
+			&:last-of-type {
+				@include phones {
+					border-bottom: 1px solid $link-line-solid;
+					padding-bottom: 10px;
+				}
+			}
+			@include laptop {
+				text-align: center;
+				margin-bottom: 8px;
+			}
+			@include phones {
+			    text-align: left;
+				margin-bottom: 20px;
+
+			}
+
+			a {
+				@include phones {
+					display: inline-block;
+					margin-bottom: 10px;
+				}
+
+			}
+			a:not(:last-of-type) {
+				margin-right: 10px;
+			}
+			
+			a:first-of-type {
+				padding-right: 10px;
+				border-right: 1px solid #d8d8d8;
+				color: $black;
+				@include phones {
+					font-weight: 700;
+					border-right: none;
+					padding-right: 0;
+
+				}
+			}
+
+		}
+
+		
+		&__copyright {
+			span {
+				@include phones {
+					font-weight: 400;
+				}
+			}
+			i {
+				color: $green;
+				margin-right: 5px;
+			}
+		}
+		
+		&__actions {
+			display: flex;
+			flex-flow: column;
+			justify-content: space-between;
+			height: 100%;
+			@include desktop {
+				align-items: flex-end;
+			}
+			@include laptop {
+				align-items: flex-start;
+			}
+			@include phones {
+				border-bottom: 1px solid $link-line-solid;
+				padding-bottom: 10px;
+			}
+		}
+		
+		&__soc {
+			@include tablets {
+			    display: flex;
+			    flex-wrap: wrap; 
+			}
+			@include phones {
+				justify-content: center;
+				margin-bottom: 10px;
+			}
+			a {
+				display: inline-flex;
+			}
+			
+			a:not(:last-of-type) {
+				margin-right: 15px;
+			}
+		}
+		
+		&__smi {
+			a {
+				margin-top: 15px;
+				display: inline-flex;
+				flex-direction:  column;
+				padding: 7px;
+				border: 1px solid rgba(0, 0, 0, 0.3);
+				border-radius: 3px;
+				color: $black;
+				
+				label {
+					opacity: .8;
+					font-size: 9px;
+					font-weight: 300;
+				}
+				
+				span {
+					font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+					letter-spacing: .07em;
+					margin-top: .1em;
+					font-weight: 500;
+				}
+			}
+		}
+
+		&__subscription {
+			@include phones {
+				display: none;
+			}
+			label {
+				display: inline-flex;
+				color: $text-info-gray-color;
+				font-size: 12px;
+				font-style: italic;
+			}
+			
+			a {
+				margin-top: 15px;
+			}
+		}
+		
+		&__error {
+			font-size: 11px;
+			@include phones {
+				margin-top: 15px;
+				padding-bottom: 20px;
+
+			}
+			
+			label {
+				color: $text-info-gray-color;
+			}
+			
+			a {
+				@include link-hover();
+				
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.to-top {
+		text-align: center;
+		margin: 0 auto;
+		flex-grow: 1;
+		border-top: 1px solid $border-default-color;
+
+		&__wrap {
+			width: 100%;
+			padding: 25px 20px 0;
+			display: inline-flex;
+			flex-wrap: wrap;
+			cursor: pointer;
+			justify-content: center;
+
+			&:hover {
+				opacity: .65;
+			}
+		}
+		&__icon {
+			margin-right: 6px;
+			color: $link;
+			transform: rotate(180deg);
+
+		}
+
+		&__text {
+			color: $link;
+		}
+	}
+}

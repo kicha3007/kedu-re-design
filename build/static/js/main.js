@@ -325,9 +325,11 @@ $(function () {
                         reset();
                         checking();
                     }
+                    ;
                 }
+                ;
             }, 50); // ожидание во избежание ошибок
-        }
+        };
 
 
             cityInput.keyup(function (eventObject) {
@@ -343,6 +345,20 @@ $(function () {
 
 
 
+/*
+    setTimeout(function () {
+        cityListWrap.
+            swiper1 = new Swiper('.swiper-container-vertical', {
+            scrollbar: {
+                el: '.swiper-scrollbar2'
+            },
+            direction: "vertical",
+            freeMode: true,
+            slidesPerView: 'auto',
+            mousewheel: true,
+            height: 200
+        });
+    }, 50);*/
 
     })();
 
@@ -365,27 +381,6 @@ $(function () {
             }
         }
     });
-
-    $("[data-it-filter-btn-title]").on("click", function () {
-        var $this = $(this);
-        var thisWrap = $this.closest("[data-it-filter-item]")
-        thisWrap.find("[data-it-filter-checkboxes]").toggle(200 );
-        thisWrap.find("[data-filter-btn-arrow]").toggleClass("active");
-    });
-
-    $("[data-select-input-wrap]").focus(function () {
-    var $this = $(this);
-    $this.addClass("active");
-        $this.parent().addClass("active");
-    });
-
-    $("[data-select-input-wrap]").blur(function () {
-        var $this = $(this);
-        $this.removeClass("active");
-        $this.closest("[data-select-wrap]").removeClass("active");
-    });
-
-
 
 
 });

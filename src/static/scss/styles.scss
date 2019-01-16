@@ -1,0 +1,91 @@
+/*!
+ * Kedu.ru
+ */
+ 
+// Bootstrap core
+@import "./bootstrap/bootstrap-grid";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+@import "./bootstrap/nav";
+@import "./bootstrap/transitions";
+@import "./bootstrap/dropdown";
+@import "./bootstrap/list-group";
+@import "./bootstrap/modal";
+@import "./bootstrap/input-group";
+@import "./bootstrap/forms";
+@import "./bootstrap/progress";
+
+// Varibales
+@import "variables";
+
+// Mixins
+@import "mixins";
+
+// Modules
+@import "./modules/normalize";
+@import "./modules/hamburgers/hamburgers";
+@import "./modules/typeahead";
+@import "./modules/responsiveslides";
+@import "./modules/fancybox";
+@import "./modules/perfectscrollbar";
+
+// UI template core
+@import "./ui/a";
+@import "./ui/h";
+@import "./ui/link";
+@import "./ui/text";
+@import "./ui/button";
+@import "./ui/input";
+@import "./ui/dropdown";
+@import "./ui/modal";
+@import "./ui/tabs";
+@import "./ui/progress";
+@import "./ui/loading";
+@import "./ui/icons";
+@import "./ui/menu";
+@import "./ui/skeleton";
+@import "./ui/alert";
+@import "./ui/form";
+@import "./ui/checkbox";
+
+// Template styles
+@import "base";
+@import "header";
+@import "footer";
+
+// Component styles
+@import "./components/breadcrumb";
+@import "./components/multilevel-menu";
+//@import "./components/mainpage-categories";
+@import "./components/city-select";
+@import "./components/auth-modal";
+@import "./components/mainpage-general-directions";
+@import "./components/mainpage-popular-directions";
+@import "./components/mainpage-actions";
+@import "./components/course-card";
+@import "./components/press-center";
+@import "./components/direction";
+@import "./components/support";
+@import "./components/anchor";
+@import "./components/detail-content";
+@import "./components/educenter";
+@import "./components/author";
+@import "./components/direction-card";
+@import "./components/gallery";
+@import "./components/filter";
+@import "./components/study-filter";
+@import "./components/offer-card";
+@import "./components/api-reviews";
+@import "./components/api-qa";
+@import "./components/before-footer-container";
+@import "./components/search";
+@import "./components/nast-banner";
+
+// Pages styles
+@import "./pages/styles";
+@import "./pages/mainpage-educenter";
+@import "./pages/program";
+@import "./pages/user";
+@import "./pages/press-center";
+@import "./pages/static-content";
+@import "./pages/http_status";

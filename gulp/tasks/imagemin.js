@@ -8,9 +8,9 @@ module.exports = function () {
 
 
     $.gulp.task('imagemin', function() {
-        return $.gulp.src('src/static/img/**/*')
+        return $.gulp.src('src/static/images/**/*')
             .pipe($.gp.imagemin())
-            .pipe($.gulp.dest('build/static/img/'))
+            .pipe($.gulp.dest('build/static/images/'))
     });
 
 

@@ -1,0 +1,54 @@
+// Kedu.ru base styles
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:100|Roboto:300|Ubuntu:300,400&subset=cyrillic');
+
+html {
+	min-height: 100%;
+	background: $bg-content-block;
+}
+
+body {
+	background-color: $white;
+
+	font-family: 'Ubuntu', 'Roboto', 'Arial', sans-serif;
+	font-weight: 300;
+	font-size: $base-font-size;
+	color: $text-color;
+	letter-spacing: 0.1px;
+	overflow-x: hidden;
+}
+
+a {
+	letter-spacing: .3px;
+}
+
+a, button, input {
+	cursor: pointer;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+h1, a, p {
+	text-rendering: optimizeLegibility;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background: #b6e1ff;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #81afd5;
+}
+::-webkit-scrollbar-thumb:hover {
+	cursor: ns-resize;
+	background: darken(#81afd5, 5%);
+}
+::-webkit-scrollbar-thumb:active {
+	background: darken(#81afd5, 5%);
+}

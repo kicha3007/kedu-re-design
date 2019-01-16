@@ -1,0 +1,14 @@
+.before-footer-container {
+    border-top: 1px solid $link-line-solid;
+    
+    img {
+        width: 100%;
+        border-radius: $base-border-radius;
+    }
+    
+    p {
+        color: $text-news-card;
+        font-size: 12px;
+        margin-top: 0;
+    }
+}

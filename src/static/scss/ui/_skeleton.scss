@@ -1,0 +1,151 @@
+/* PRELOADER SKELETON */
+:root {
+    --card-padding: 24px;
+    --card-height: 340px;
+    --card-width: 100%;
+    --card-skeleton: linear-gradient(#{$bg-block-background-color} var(--card-height), transparent 0);
+
+    --avatar-height: 120px;
+    --avatar-width: calc(var(--card-width) - 48px);
+    --avatar-position: var(--card-padding) var(--card-padding);
+    --avatar-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--avatar-height), transparent 0);
+
+    --title-height: 42px;
+    --title-width: calc(var(--card-width) - 48px);
+    --title-position: var(--card-padding) 160px;
+    --title-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--title-height), transparent 0);
+
+    --desc-line-height: 16px;
+    --desc-line-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--desc-line-height), transparent 0);
+    --desc-line-1-width:230px;
+    --desc-line-1-position: var(--card-padding) 225px;
+    --desc-line-2-width:180px;
+    --desc-line-2-position: var(--card-padding) 250px;
+
+    --count-height: 18px;
+    --count-width: 35px;
+    --count-position: calc(var(--card-width) - 20px) 295px;
+    --count-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--count-height), transparent 0);
+
+    --blur-width: 200px;
+    --blur-size: var(--blur-width) calc(var(--card-height) - var(--count-height));
+
+    /* FOR HORIZONTAL CARD */
+    --h-avatar-height: 270px;
+    --h-avatar-width: 40%;
+    --h-avatar-position: calc(var(--card-width) - var(--card-padding)) var(--card-padding);
+    --h-avatar-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--h-avatar-height), transparent 0);
+
+    --h-title-width: 230px;
+    --h-title-position: var(--card-padding) var(--card-padding);
+    --h-title-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--title-height), transparent 0);
+
+    --h-desc-line-1-position: var(--card-padding) 100px;
+    --h-desc-line-2-position: var(--card-padding) 125px;
+    --h-desc-line-3-position: var(--card-padding) 150px;
+
+    --h-count-position: 19px 295px;
+    --h-count-skeleton: linear-gradient(#{$bg-skeleton-loader-item-color} var(--count-height), transparent 0);
+}
+@mixin news-item-h-sceleton(){
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba($bg-block-background-color, 0) 0,
+            rgba($bg-block-background-color, 0.5) 50%,
+            rgba($bg-block-background-color, 0) 100%
+        ),                          //animation blur
+        var(--h-title-skeleton),      //title
+        var(--desc-line-skeleton),  //desc1
+        var(--desc-line-skeleton),  //desc2
+        var(--desc-line-skeleton),  //desc3
+        var(--h-avatar-skeleton),     //avatar
+        var(--h-count-skeleton),     //footer bar
+        var(--card-skeleton);        //card
+
+    background-size:
+        var(--blur-size),
+        var(--h-title-width) var(--title-height),
+        var(--desc-line-1-width) var(--desc-line-height),
+        var(--desc-line-2-width) var(--desc-line-height),
+        var(--desc-line-2-width) var(--desc-line-height),
+        var(--h-avatar-width) var(--h-avatar-height),
+        var(--count-width) var(--count-height),
+        100% 100%;
+
+    background-position:
+        -100% 0,                      //animation
+        var(--h-title-position),        //title
+        var(--h-desc-line-1-position),  //desc1
+        var(--h-desc-line-2-position),  //desc2
+        var(--h-desc-line-3-position),  //desc3
+        var(--h-avatar-position),       //avatar
+        var(--h-count-position),       //footer bar
+        0 0;                           //card
+
+    background-repeat: no-repeat;
+    animation: h-skeleton-animation 1.5s infinite;
+}
+@mixin news-item-sceleton(){
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba($bg-block-background-color, 0) 0,
+            rgba($bg-block-background-color, 0.5) 50%,
+            rgba($bg-block-background-color, 0) 100%
+        ),                          //animation blur
+        var(--title-skeleton),      //title
+        var(--desc-line-skeleton),  //desc1
+        var(--desc-line-skeleton),  //desc2
+        var(--avatar-skeleton),     //avatar
+        var(--count-skeleton),     //footer bar
+        var(--card-skeleton);        //card
+
+    background-size:
+        var(--blur-size),
+        var(--title-width) var(--title-height),
+        var(--desc-line-1-width) var(--desc-line-height),
+        var(--desc-line-2-width) var(--desc-line-height),
+        var(--avatar-width) var(--avatar-height),
+        var(--count-width) var(--count-height),
+        100% 100%;
+
+    background-position:
+        -100% 0,                      //animation
+        var(--title-position),        //title
+        var(--desc-line-1-position),  //desc1
+        var(--desc-line-2-position),  //desc2
+        var(--avatar-position),       //avatar
+        var(--count-position),       //footer bar
+        0 0;                           //card
+
+    background-repeat: no-repeat;
+    animation: skeleton-animation 1.5s infinite;
+}
+
+@keyframes skeleton-animation {
+    to {
+        background-position:
+            250% 0,
+            var(--title-position),
+            var(--desc-line-1-position),
+            var(--desc-line-2-position),
+            var(--avatar-position),
+            var(--count-position),
+            0 0;
+    }
+}
+
+@keyframes h-skeleton-animation {
+    to {
+        background-position:
+            100% 0,
+            var(--h-title-position),
+            var(--h-desc-line-1-position),
+            var(--h-desc-line-2-position),
+            var(--h-desc-line-3-position),
+            var(--h-avatar-position),
+            var(--h-count-position),
+            0 0;
+    }
+}

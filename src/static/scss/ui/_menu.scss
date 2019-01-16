@@ -1,0 +1,24 @@
+.user-menu-left {
+	a {
+		@include link-hover();
+		
+		display: flex;
+		align-items: center;
+		padding: 8px 0;
+		color: $link;
+
+		
+		i {
+			margin-right: 12px;
+			font-size: 1.5em;
+			opacity: .5;
+		}
+		
+		&.bb {
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			
+			border-bottom: 1px solid $border-light-color;
+		}
+	}
+}

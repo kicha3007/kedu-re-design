@@ -1,0 +1,20 @@
+@mixin alert($background: $text-info-gray-color) {
+	display: flex;
+	padding: 15px;
+	background: $background;
+	border-radius: $base-border-radius;
+	border: 1px solid darken($background, 10%);
+	color: darken($background, 50%);
+}
+
+.alert {
+	@include alert();
+}
+
+.alert-danger {
+	@include alert($alert-danger);
+}
+
+.alert-success {
+	@include alert($alert-success);
+}

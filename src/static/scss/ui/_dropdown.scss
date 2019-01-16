@@ -1,0 +1,157 @@
+@mixin dropdown-default($color: $text-link-color) {
+	color: $color;
+	
+	i {
+		margin-left: 7px;
+	}
+	
+	@include link-hover();
+}
+
+.dropdown {
+	&__link {
+		@include dropdown-default;
+
+		&-text {
+			color: $text-default-link;
+		}
+	}
+
+	&-item-indent {
+		margin-bottom: 0 !important;
+	}
+
+
+}
+
+.dropdown-gray {
+	&__link {
+		@include dropdown-default($text-info-gray-color);
+	}
+}
+
+.dropdown-blue {
+	&__link {
+		@include dropdown-default($link);
+	}
+}
+
+.dropdown-user {
+	position: relative;
+	&__link {
+		@include btn-light($border-default-color);
+		
+		@include dropdown-default();
+
+		position: relative;
+		padding-right: 20px;
+		padding-left: 50px;
+
+		padding-top: 15px;
+		padding-bottom: 15px;
+		max-height: 46px;
+		@include tablets {
+			padding-top: 10px ;
+			padding-bottom: 10px ;
+			min-height: 35px;
+		}
+		@include phones {
+			display: initial;
+			max-width: 80px;
+			padding-right: 15px;
+			padding-left: 30px;
+		}
+
+		.zmdi-chevron-down {
+			&:before {
+				@include phones {
+					display: none;
+				}
+			}
+		}
+
+		&-text {
+			@include phones {
+				display: none;
+			}
+		}
+
+		span {
+			position: absolute;
+			left: 2px;
+			top: 50%;
+			margin-top: -20px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			@include tablets {
+				margin-top: -15px;
+				height: 30px ;
+				width: 30px ;
+			}
+		}
+	}
+}
+
+.dropdown-menu {
+	border: 1px solid $border-default-color;
+	border-radius: $base-modal-radius;
+	box-shadow: none;
+	padding: 0;
+
+	&-size {
+		max-height: 400px;
+		overflow: auto;
+		min-width: 100%;
+	}
+
+	&-height {
+		max-height: 400px;
+		overflow: auto;
+	}
+	
+	a {
+		font-size: $base-font-size;
+		position: relative;
+		display: flex;
+		align-items: center;
+		line-height: 1.5em;
+		padding: 8px 25px;
+		justify-content: space-between;
+		color: #000;
+		
+		transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+		
+		i {
+			margin-right: 10px;
+		}
+		
+		span {
+			float: right;
+			line-height: 1em;
+			color: #fff;
+			font-size: 10px;
+			background-color: $notifitacion-green;
+			box-shadow: inset 0px 0px 3px 0px rgba(255,255,255,0.3);
+			border-radius: 10px;
+			padding: 3px 5px;
+			margin-left: 10px;
+		}
+		
+		&:after {
+			position: absolute;
+			display: block;
+			content: "";
+			width: 100%;
+			left: 0;
+			bottom: 0px;
+			border-top: 1px solid rgba($text-color, .05);
+		}
+		
+		&:hover {
+			background: $brand-color;
+		}
+	}
+}

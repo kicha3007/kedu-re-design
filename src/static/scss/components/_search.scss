@@ -1,0 +1,28 @@
+.search-result {
+	display: flex;
+	flex-wrap: wrap;
+	
+	&__item {
+		flex-basis: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		margin-bottom: 30px;
+		
+		a {
+			@include link-hover();
+			
+			display: inline-table;
+			color: $link;
+		}
+		
+		span {
+			margin-top: 7px;
+			font-size: 11px;
+			
+			i {
+				margin-right: 7px;
+			}
+		}
+	}
+}

@@ -1,0 +1,251 @@
+.api-reviews-header-educenter{
+    .api-reviews-rating{
+        &__row{
+            display: inline-block;
+            margin-top: 15px;
+
+            &--stars_empty{
+                background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 -15px;
+                height: 21px;
+                width: 110px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &--stars_full{
+                background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 -36px;
+                height: 21px;
+                display: block;
+                width: 0;
+            }
+            &--average{
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 20pt;
+                margin-left: 15px;
+            }
+        }
+    }
+    a:before{
+        display: none;
+    }
+    a:hover{
+        opacity: 1;
+
+    }
+}
+
+.api-reviews{
+    min-height: 200px;
+
+    .api-text{
+        margin-bottom: 5px;
+    }
+
+    .api-block-top{
+        margin-bottom: 40px;
+        border: 0;
+        box-shadow: none;
+    }
+    .api-block-header{
+        display: block;
+        padding: 0;
+    }
+    h2, h3{
+        font-size: 16px;
+        font-weight: 700;
+        color: $text-news-card;
+    }
+
+    .api-stars-empty{
+        background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 -15px;
+        height: 21px;
+        width: 110px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .api-stars-full{
+        background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 -36px;
+        height: 21px;
+        display: block;
+        width: 0;
+    }
+
+    .api-reviews-stat{
+        display: block;
+        float: none !important;
+        width: 100% !important;
+
+        .api-left-stat{
+            float: none;
+            width: auto;
+        }
+    }
+
+    .api-reviews-form{
+        display: block;
+        float: none !important;
+        width: 100% !important;
+        margin-top: 20px;
+
+        .api-shop-stat {
+            position: relative;
+            text-align: center;
+            display: inline-flex;
+
+            .api-button{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border: 0;
+                transition: all 0.2s cubic-bezier(0, 0.11, 0.21, 0.75);
+                padding: 10px 25px;
+                color: $button-default-color;
+                background-color: $brand-color;
+                border-radius: 30px;
+                line-height: initial;
+                text-shadow: none;
+                box-shadow: none;
+
+                i.zmdi{
+                    margin-right: 12px;
+                }
+            }
+            .api-button:hover{
+                background-color: lighten($brand-color, 10%);
+            }
+        }
+
+    }
+    .api-star-rating{
+        letter-spacing: 0;
+        font-size: 0;
+        .api-icon-star.api-icon-active{
+            background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 0;
+        }
+        .api-icon-star.api-icon{
+            background: url("#{$base-image-path}/reviews-sprite.png") no-repeat -16px 0;
+        }
+        .api-icon-star{
+            background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 -57px;
+        }
+    }
+
+    .api-reviews-list{
+        .api-item{
+            background-color: $bg-block-background-color;
+        }
+    }
+    .api_form textarea{
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .api_modal{
+        .api_buttons{
+            display: block;
+            text-align: center;
+
+            .api-button{
+                display: inline-block;
+                width: auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border: 0;
+                transition: all 0.2s cubic-bezier(0, 0.11, 0.21, 0.75);
+                padding: 10px 25px;
+                color: $button-default-color;
+                background-color: $brand-color;
+                border-radius: 3px;
+                line-height: initial;
+                text-shadow: none;
+                box-shadow: none;
+
+                i.zmdi{
+                    margin-right: 12px;
+                }
+            }
+
+            .api-button:hover{
+                background-color: lighten($brand-color, 10%);
+            }
+        }
+    }
+    .api-user-info{
+        i.zmdi{
+            float: left;
+            margin-right: 15px;
+            font-size: 32px;
+            color: #b3b3b3;
+            overflow: visible;
+        }
+    }
+    .api-guest-info > div{
+        line-height: 15px !important;
+    }
+    .api-date:before{
+        display: none !important;
+    }
+    .api-date{
+        i.zmdi{
+            font-size: 16px;
+            display: inline-block;
+            margin: 0 6px -2px 0;
+        }
+    }
+    .api-content{
+        border-bottom: 1px solid $hr-border-color;
+    }
+    .api-reply-textarea textarea{
+        min-height: 100px;
+        resize: vertical;
+        overflow: auto;
+    }
+}
+
+.api-reviews-list-rating{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 50%;
+    color: $text-statistic-color;
+    opacity: 1;
+    -webkit-transition: opacity 0.0s ease-in-out;
+    -moz-transition: opacity 0.0s ease-in-out;
+    -ms-transition: opacity 0.0s ease-in-out;
+    -o-transition: opacity 0.0s ease-in-out;
+    transition: opacity 0.0s ease-in-out;
+    padding-left: 5px;
+    @include phones {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    &__count{
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 8px;
+        @include phones {
+            font-size: 16px;
+            margin-left: 6px;
+        }
+    }
+}
+.api-reviews-list-rating:hover{
+    opacity: 0.65;
+
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    -ms-transition: opacity .1s ease-in-out;
+    -o-transition: opacity .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
+}
+
+.api-icon-star-mod {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background: url("#{$base-image-path}/reviews-sprite.png") no-repeat 0 0;
+}
