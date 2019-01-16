@@ -1,0 +1,41 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width", initial-scale=1)
+        title kedu-re-design
+        link(rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css" )
+        link(rel="stylesheet" type="text/css" href="static/css/jquery.fancybox.css" )
+        link(rel="stylesheet" type="text/css" href="static/css/swiper.min.css" )
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic', rel='stylesheet')
+        link(rel="stylesheet" type="text/css" href="static/css/main.css" )
+    body
+        .it-main-page__wrapper
+            .it-main-page__content
+                include medvisor/header
+                //include medvisor/clinics
+                //include medvisor/doctors
+                //include medvisor/services
+                //include medvisor/thems
+                //include medvisor/news
+                //include medvisor/articles
+                include medvisor/breadcrumbs
+                .it-main-page__top
+                    include medvisor/med-institute
+                .it-container
+                    .it-main-page__center
+                        .it-main-page__half.it-main-page__half--left
+                            include medvisor/sidebar
+                        .it-main-page__half.it-main-page__half--right
+                            include medvisor/clinics2
+            include medvisor/footer
+            include medvisor/modal-info
+
+
+
+
+        script(src='static/js/jquery-3.3.1.min.js', type='text/javascript')
+        script(src='static/js/owl.carousel.min.js', type='text/javascript')
+        script(src='static/js/swiper.min.js', type='text/javascript')
+        script(src='static/js/jquery.fancybox.js', type='text/javascript')
+        script(src='static/js/main.js', type='text/javascript')
