@@ -39,7 +39,7 @@
 .dropdown-user {
 	position: relative;
 	&__link {
-		@include btn-light($border-default-color);
+		//@include btn-light($border-default-color);
 		
 		@include dropdown-default();
 

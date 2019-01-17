@@ -1,24 +1,382 @@
 .mainpage
 	header
-		#kedu_header_logo_frame.menu__logo.col-8.col-md-5.col-sm-6
-			a(href='/moskva')
-				i
-				span Эксперт по образованию
-		#search_line_container.col-lg-20.offset-lg-2
-			#search_line.search
-				.search__overlay.search__overlay-header-panel
-					form#kedu_search_form(name='search')
-						.row.no-gutters.align-items-strech.justify-content-between
-							.col-sm-auto.filter__search-icon
-								i.zmdi.zmdi-search
-							.col
-								span.twitter-typeahead(style='position: relative; display: inline-block;')
-									input.search__input.search__input-header-panel.tt-hint(type='search', autocomplete='off', autocorrect='off', spellcheck='false', role='textbox', value='', readonly='', tabindex='-1', style='position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);', dir='ltr')
-									input#kedu_search_input.search__input.search__input-header-panel.tt-input.in(type='search', autocomplete='off', autocorrect='off', spellcheck='false', name='query', role='combobox', value='', placeholder='Школы Москвы', dir='auto', aria-activedescendant='', aria-owns='kedu_search_input_listbox', aria-readonly='true', aria-autocomplete='list', style='position: relative; vertical-align: top; background-color: transparent;')
-									span(role='status', aria-live='polite', style='position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;')
-									pre(aria-hidden='true', style='position: absolute; visibility: hidden; white-space: pre; font-family: Ubuntu, Roboto, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 500; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;').
-									.tt-menu(role='listbox', style='position: absolute; top: 100%; left: 0px; z-index: 100; display: none;', aria-expanded='false')
-										.tt-dataset.tt-dataset-search-result(role='presentation')
-					.search__result(style='display: none;')
+		.header__top
+			.container-fluid
+				.row.align-items-center
+					.col-sm-3
+						#kedu_header_logo_frame.menu__logo
+							a(href='/moskva').menu__logo-link
+								i.menu__logo-icon
+								span.menu__logo-text Эксперт по образованию
+					.col
+						#search_line_container
+							#search_line.search
+								.search__overlay.search__overlay-header-panel
+									form#kedu_search_form(name='search')
+										.row.no-gutters.align-items-strech.justify-content-between
+											.col-sm-auto.filter__search-icon
+												i.zmdi.zmdi-search
+											.col
+												input#kedu_search_input.search__input.search__input-header-panel(type='search', autocomplete='off', autocorrect='off', spellcheck='false', name='query', role='textbox', value='', placeholder='МГУ')
+									.search__result
+					.col-lg-3.col-xl-2
+						.menu__city
+							.dropdown-blue
+								a.dropdown-blue__link(href='#', data-toggle='modal', data-target='#city_select_modal')
+									i.zmdi.zmdi-pin
+									span.dropdown-blue__text   Москва
+									i.zmdi.zmdi-chevron-down
+								.dropdown-blue__content
+					.col-lg-3.col-xl-1
+						a(href="#").notification
+							img(src="static/images/ui/icon/notification.svg", alt='').notification__img
+							.notification__numeric
+								span.notification__number
+										|	1
+					.col-lg-3.col-xl-1
+						.dropdown-user
+							a.dropdown-user__link.open-auth-modal(href='#', role='button')
+								span(style="background-image: url('static/images/ui/icon/default-user.svg');")
+					.col-sm-2
+						a(href="#")
+							| Мое образование
+		.header__bottom
+			.container-fluid
+				.row.align-items-center
+					.col-sm-3
+						a(href="#").educational
+							.educational__img-box
+								img.educational__img(src="static/images/ui/icon/university-campus.svg", alt='')
+							.educational__text
+								| Вы представитель
+								br
+								| учебного центра?
+					.header__half.col-sm-auto
+						#kedu_before_header_menu_frame
+							// 'start_frame_cache_kedu_before_header_menu_frame'
+							section(data-it-menu='')
+								.menu-before__outer-wrap
+									.menu-before
+										.container
+											ul.d-flex.align-items-center.h-100.menu-before__list
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='menu_before_content_block_0')
+														span.menu-before__inner-text
+															| Виды образования
+															i.zmdi.zmdi-chevron-down
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='menu_before_content_block_1')
+														span.menu-before__inner-text
+															| Направления
+															i.zmdi.zmdi-chevron-down
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/moskva/centers', data-toggle='menu_before_content_block_2')
+														span.menu-before__inner-text
+															| Учебные заведения
+															i.zmdi.zmdi-chevron-down
+									.menu-before__content(data-it-menu-before-content='')
+										.container
+											ul#menu_before_content_block_0.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/vo/all') Высшее образование
+												li.menu-before__content-item
+													a(href='/moskva/spo/all') Среднее специальное образование
+												li.menu-before__content-item
+													a(href='/moskva/attestation/all') Аттестация
+												li.menu-before__content-item
+													a(href='/moskva/pk/all') Повышение квалификации
+												li.menu-before__content-item
+													a(href='/moskva/school-edu/all') Школьное образование
+												li.menu-before__content-item
+													a(href='/moskva/preschool-edu/all') Дошкольное образование
+												li.menu-before__content-item
+													a(href='/moskva/pp/all') Профессиональная переподготовка
+												li.menu-before__content-item
+													a(href='/moskva/study-adboard/all') Обучение за рубежом
+												li.menu-before__content-item
+													a(href='/moskva/kurs/all') Курсы
+												li.menu-before__content-item
+													a(href='/moskva/short-edu/all') Краткосрочное обучение
+											ul#menu_before_content_block_1.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/transport') Транспорт
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/zdravookhranenie') Здравоохранение
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/stroitelstvo') Строительство
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/pedagogika') Педагогика
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/neftegazovoe-delo') Нефтегазовое дело
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/it') IT
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/ekonomika-i-finansy') Экономика и финансы
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/kultura-i-iskusstvo') Культура и искусство
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training')
+														| Все
+														label 8
+											ul#menu_before_content_block_2.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/vuzy') ВУЗы
+												li.menu-before__content-item
+													a(href='/moskva/ssuzy') ССУЗы
+												li.menu-before__content-item
+													a(href='/moskva/educenter') Учебные центры
+												li.menu-before__content-item
+													a(href='/moskva/school') Школы
+												li.menu-before__content-item
+													a(href='/moskva/kindergarten') Детские сады
+						#kedu_before_header_mobile_menu_frame
+							// 'start_frame_cache_kedu_before_header_mobile_menu_frame'
+							#menu-mobile.dl-menuwrapper.city-select__change-menu.city-select__change-menu--mod1(data-it-nav='')
+								span.city-select__close(data-modal-close='')
+								ul.city-select__list
+									li
+										a.dropdown-blue__link(href='#', data-toggle='modal', data-target='#city_select_modal')
+											i.zmdi.zmdi-pin
+											|  Москва
+									li
+										a.dropdown-user__link.open-auth-modal(href='#', role='button')
+											span(style="background-image: url('/local/templates/kedu/assets/images/ui/icon/default-user.svg');")
+											div Войти / Регистрация
+								ul.dl-menu
+									li
+										a(href='/edutypes')
+											| Виды образования
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/vo/all') Высшее образование
+											li
+												a.change-city-link(href='/moskva/spo/all') Среднее специальное образование
+											li
+												a.change-city-link(href='/moskva/attestation/all') Аттестация
+											li
+												a.change-city-link(href='/moskva/pk/all') Повышение квалификации
+											li
+												a.change-city-link(href='/moskva/school-edu/all') Школьное образование
+											li
+												a.change-city-link(href='/moskva/preschool-edu/all') Дошкольное образование
+											li
+												a.change-city-link(href='/moskva/pp/all') Профессиональная переподготовка
+											li
+												a.change-city-link(href='/moskva/study-adboard/all') Обучение за рубежом
+											li
+												a.change-city-link(href='/moskva/kurs/all') Курсы
+											li
+												a.change-city-link(href='/moskva/short-edu/all') Краткосрочное обучение
+									li
+										a(href='/moskva/directions-of-training')
+											| Направления
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/directions-of-training/transport') Транспорт
+											li
+												a.change-city-link(href='/moskva/directions-of-training/zdravookhranenie') Здравоохранение
+											li
+												a.change-city-link(href='/moskva/directions-of-training/stroitelstvo') Строительство
+											li
+												a.change-city-link(href='/moskva/directions-of-training/pedagogika') Педагогика
+											li
+												a.change-city-link(href='/moskva/directions-of-training/neftegazovoe-delo') Нефтегазовое дело
+											li
+												a.change-city-link(href='/moskva/directions-of-training/it') IT
+											li
+												a.change-city-link(href='/moskva/directions-of-training/ekonomika-i-finansy') Экономика и финансы
+											li
+												a.change-city-link(href='/moskva/directions-of-training/kultura-i-iskusstvo') Культура и искусство
+											li
+												a.change-city-link(href='/moskva/directions-of-training') Все
+									li
+										a(href='/moskva/centers')
+											| Учебные заведения
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/vuzy') ВУЗы
+											li
+												a.change-city-link(href='/moskva/ssuzy') ССУЗы
+											li
+												a.change-city-link(href='/moskva/educenter') Учебные центры
+											li
+												a.change-city-link(href='/moskva/school') Школы
+											li
+												a.change-city-link(href='/moskva/kindergarten') Детские сады
 
+					.header__half.col-sm-auto
+						#kedu_before_header_menu_frame
+							// 'start_frame_cache_kedu_before_header_menu_frame'
+							section(data-it-menu='')
+								.menu-before__outer-wrap
+									.menu-before
+										.container
+											ul.d-flex.align-items-center.h-100.menu-before__list
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='menu_before_content_block_4')
+														span.menu-before__inner-text
+															| Виды образования
+															i.zmdi.zmdi-chevron-down
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='menu_before_content_block_5')
+														span.menu-before__inner-text
+															| Направления
+															i.zmdi.zmdi-chevron-down
+												li.menu-before__item
+													a.dropdown__link.menu-before__link(href='/moskva/centers', data-toggle='menu_before_content_block_6')
+														span.menu-before__inner-text
+															| Учебные заведения
+															i.zmdi.zmdi-chevron-down
+									.menu-before__content(data-it-menu-before-content='')
+										.container
+											ul#menu_before_content_block_4.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/vo/all') Высшее образование
+												li.menu-before__content-item
+													a(href='/moskva/spo/all') Среднее специальное образование
+												li.menu-before__content-item
+													a(href='/moskva/attestation/all') Аттестация
+												li.menu-before__content-item
+													a(href='/moskva/pk/all') Повышение квалификации
+												li.menu-before__content-item
+													a(href='/moskva/school-edu/all') Школьное образование
+												li.menu-before__content-item
+													a(href='/moskva/preschool-edu/all') Дошкольное образование
+												li.menu-before__content-item
+													a(href='/moskva/pp/all') Профессиональная переподготовка
+												li.menu-before__content-item
+													a(href='/moskva/study-adboard/all') Обучение за рубежом
+												li.menu-before__content-item
+													a(href='/moskva/kurs/all') Курсы
+												li.menu-before__content-item
+													a(href='/moskva/short-edu/all') Краткосрочное обучение
+											ul#menu_before_content_block_5.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/transport') Транспорт
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/zdravookhranenie') Здравоохранение
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/stroitelstvo') Строительство
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/pedagogika') Педагогика
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/neftegazovoe-delo') Нефтегазовое дело
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/it') IT
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/ekonomika-i-finansy') Экономика и финансы
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training/kultura-i-iskusstvo') Культура и искусство
+												li.menu-before__content-item
+													a(href='/moskva/directions-of-training')
+														| Все
+														label 8
+											ul#menu_before_content_block_6.menu-before__content-links
+												li.menu-before__content-item
+													a(href='/moskva/vuzy') ВУЗы
+												li.menu-before__content-item
+													a(href='/moskva/ssuzy') ССУЗы
+												li.menu-before__content-item
+													a(href='/moskva/educenter') Учебные центры
+												li.menu-before__content-item
+													a(href='/moskva/school') Школы
+												li.menu-before__content-item
+													a(href='/moskva/kindergarten') Детские сады
+						#kedu_before_header_mobile_menu_frame
+							// 'start_frame_cache_kedu_before_header_mobile_menu_frame'
+							#menu-mobile.dl-menuwrapper.city-select__change-menu.city-select__change-menu--mod1(data-it-nav='')
+								span.city-select__close(data-modal-close='')
+								ul.city-select__list
+									li
+										a.dropdown-blue__link(href='#', data-toggle='modal', data-target='#city_select_modal')
+											i.zmdi.zmdi-pin
+											|  Москва
+									li
+										a.dropdown-user__link.open-auth-modal(href='#', role='button')
+											span(style="background-image: url('/local/templates/kedu/assets/images/ui/icon/default-user.svg');")
+											div Войти / Регистрация
+								ul.dl-menu
+									li
+										a(href='/edutypes')
+											| Виды образования
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/vo/all') Высшее образование
+											li
+												a.change-city-link(href='/moskva/spo/all') Среднее специальное образование
+											li
+												a.change-city-link(href='/moskva/attestation/all') Аттестация
+											li
+												a.change-city-link(href='/moskva/pk/all') Повышение квалификации
+											li
+												a.change-city-link(href='/moskva/school-edu/all') Школьное образование
+											li
+												a.change-city-link(href='/moskva/preschool-edu/all') Дошкольное образование
+											li
+												a.change-city-link(href='/moskva/pp/all') Профессиональная переподготовка
+											li
+												a.change-city-link(href='/moskva/study-adboard/all') Обучение за рубежом
+											li
+												a.change-city-link(href='/moskva/kurs/all') Курсы
+											li
+												a.change-city-link(href='/moskva/short-edu/all') Краткосрочное обучение
+									li
+										a(href='/moskva/directions-of-training')
+											| Направления
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/directions-of-training/transport') Транспорт
+											li
+												a.change-city-link(href='/moskva/directions-of-training/zdravookhranenie') Здравоохранение
+											li
+												a.change-city-link(href='/moskva/directions-of-training/stroitelstvo') Строительство
+											li
+												a.change-city-link(href='/moskva/directions-of-training/pedagogika') Педагогика
+											li
+												a.change-city-link(href='/moskva/directions-of-training/neftegazovoe-delo') Нефтегазовое дело
+											li
+												a.change-city-link(href='/moskva/directions-of-training/it') IT
+											li
+												a.change-city-link(href='/moskva/directions-of-training/ekonomika-i-finansy') Экономика и финансы
+											li
+												a.change-city-link(href='/moskva/directions-of-training/kultura-i-iskusstvo') Культура и искусство
+											li
+												a.change-city-link(href='/moskva/directions-of-training') Все
+									li
+										a(href='/moskva/centers')
+											| Учебные заведения
+											span
+												i.zmdi.zmdi-chevron-right
+										ul.dl-submenu
+											li
+												a.change-city-link(href='/moskva/vuzy') ВУЗы
+											li
+												a.change-city-link(href='/moskva/ssuzy') ССУЗы
+											li
+												a.change-city-link(href='/moskva/educenter') Учебные центры
+											li
+												a.change-city-link(href='/moskva/school') Школы
+											li
+												a.change-city-link(href='/moskva/kindergarten') Детские сады
+
+					.header__half.col-sm-auto
+						ul.d-flex.align-items-center.h-100.menu-before__list
+							li.menu-before__item
+								a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='')
+									span.menu-before__inner-text
+										| Виды образования
+							li.menu-before__item
+								a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='')
+									span.menu-before__inner-text
+										| Направления
 
