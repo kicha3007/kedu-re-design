@@ -18,11 +18,11 @@
           <header>
             <div class="header__top">
               <div class="container-fluid">
-                <div class="row align-items-center">
-                  <div class="col-sm-3">
+                <div class="row align-items-center header__wrap">
+                  <div class="header__top-half col-sm-4 col-xl-3 col-6 order-1">
                     <div class="menu__logo" id="kedu_header_logo_frame"><a class="menu__logo-link" href="/moskva"><i class="menu__logo-icon"></i><span class="menu__logo-text">Эксперт по образованию</span></a></div>
                   </div>
-                  <div class="col">
+                  <div class="header__top-half col-24 col-sm order-md-2 order-8">
                     <div id="search_line_container">
                       <div class="search" id="search_line">
                         <div class="search__overlay search__overlay-header-panel">
@@ -39,19 +39,23 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-xl-2">
+                  <div class="header__top-half col-auto order-md-3 order-2 ml-sm-0 ml-auto">
                     <div class="menu__city">
                       <div class="dropdown-blue"><a class="dropdown-blue__link" href="#" data-toggle="modal" data-target="#city_select_modal"><i class="zmdi zmdi-pin"></i><span class="dropdown-blue__text">  Москва</span><i class="zmdi zmdi-chevron-down"></i></a>
                         <div class="dropdown-blue__content"></div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-xl-1"><a class="notification" href="#"><img class="notification__img" src="static/images/ui/icon/notification.svg" alt="">
+                  <div class="w-100 d-sm-none order-5"></div>
+                  <div class="header__top-half col-auto order-md-4 order-6 ml-sm-0 ml-auto"><a class="notification" href="#"><img class="notification__img" src="static/images/ui/icon/notification.svg" alt="">
                       <div class="notification__numeric"><span class="notification__number">	1</span></div></a></div>
-                  <div class="col-lg-3 col-xl-1">
+                  <div class="header__top-half col-auto order-md-5 order-3">
                     <div class="dropdown-user"><a class="dropdown-user__link open-auth-modal" href="#" role="button"><span style="background-image: url('static/images/ui/icon/default-user.svg');"></span></a></div>
                   </div>
-                  <div class="col-sm-2"><a href="#">Мое образование</a></div>
+                  <div class="col-auto d-sm-none order-4">
+                    <button class="btn btn-active btn-menu" data-trigger="">Меню</button>
+                  </div>
+                  <div class="header__top-half col-auto order-7"><a href="#">Мое образование</a></div>
                 </div>
               </div>
             </div>

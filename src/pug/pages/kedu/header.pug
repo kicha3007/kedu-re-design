@@ -2,13 +2,13 @@
 	header
 		.header__top
 			.container-fluid
-				.row.align-items-center
-					.col-sm-3
+				.row.align-items-center.header__wrap
+					.header__top-half.col-sm-4.col-xl-3.col-6.order-1
 						#kedu_header_logo_frame.menu__logo
 							a(href='/moskva').menu__logo-link
 								i.menu__logo-icon
 								span.menu__logo-text Эксперт по образованию
-					.col
+					.header__top-half.col-24.col-sm.order-md-2.order-8
 						#search_line_container
 							#search_line.search
 								.search__overlay.search__overlay-header-panel
@@ -19,7 +19,7 @@
 											.col
 												input#kedu_search_input.search__input.search__input-header-panel(type='search', autocomplete='off', autocorrect='off', spellcheck='false', name='query', role='textbox', value='', placeholder='МГУ')
 									.search__result
-					.col-lg-3.col-xl-2
+					.header__top-half.col-auto.order-md-3.order-2.ml-sm-0.ml-auto
 						.menu__city
 							.dropdown-blue
 								a.dropdown-blue__link(href='#', data-toggle='modal', data-target='#city_select_modal')
@@ -27,17 +27,20 @@
 									span.dropdown-blue__text   Москва
 									i.zmdi.zmdi-chevron-down
 								.dropdown-blue__content
-					.col-lg-3.col-xl-1
+					.w-100.d-sm-none.order-5
+					.header__top-half.col-auto.order-md-4.order-6.ml-sm-0.ml-auto
 						a(href="#").notification
 							img(src="static/images/ui/icon/notification.svg", alt='').notification__img
 							.notification__numeric
 								span.notification__number
 										|	1
-					.col-lg-3.col-xl-1
+					.header__top-half.col-auto.order-md-5.order-3
 						.dropdown-user
 							a.dropdown-user__link.open-auth-modal(href='#', role='button')
 								span(style="background-image: url('static/images/ui/icon/default-user.svg');")
-					.col-sm-2
+					.col-auto.d-sm-none.order-4
+						button.btn.btn-active.btn-menu(data-trigger='') Меню
+					.header__top-half.col-auto.order-7
 						a(href="#")
 							| Мое образование
 		.header__bottom
