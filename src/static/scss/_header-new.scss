@@ -174,8 +174,8 @@ a.back-link {
 
   .menu-before__content-links {
     background-color: $white;
-    padding: 0 20px 20px;
-    max-width: 100%;
+/*!*    padding: 0 20px 20px;*!
+    max-width: 100%;*/
   }
   .header__top {
     border-bottom: 1px solid #f7f7f7;
@@ -234,6 +234,7 @@ a.back-link {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: -10px;
   }
 
   .educational__img-box {
@@ -241,6 +242,7 @@ a.back-link {
     max-height: 33px;
     width: 100%;
     margin-right: 12px;
+    margin-bottom: 10px;
   }
 
   .educational__img {
@@ -253,6 +255,7 @@ a.back-link {
   .educational__text {
     line-height: 1.5;
     font-size: 11px;
+    margin-bottom: 10px;
   }
 
   .header__half {
@@ -827,6 +830,14 @@ a.back-link {
       display: none;
     }
 
+    &__main-wrap {
+      display: flex;
+      margin: 0;
+      padding: 0 15px;
+    }
+
+
+
     &__list {
       margin: 0;
       padding: 0;
@@ -940,11 +951,99 @@ a.back-link {
   }
 
 
+
+
+
+
+
+
+
+
+}
+.menu-before__main-wrap:before,
+.menu-before__main-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 4;
+  background: linear-gradient(to right, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
 }
 
+.menu-before {
+  &__main-wrap {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+  &__main-wrap.menu-mobile .menu-before__outer-item:last-child {
+    padding-right: 15px;
+  }
+  &__main-wrap:before,
+  &__main-wrap:after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 4;
+    background: linear-gradient(to right, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+  }
+  &__main-wrap:after {
+    left: auto;
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+  }
+  &__main-wrap.menu-mobile:before,
+  &__main-wrap.menu-mobile:after {
+    display: block;
+  }
+
+  &__wrap {
+    position: relative;
+  }
+
+  &__outer-item {
+    margin: 0 10px ;
+    list-style-type: none;
+    padding-left: 0;
+    &:first-child {
+      margin-left: 0;
+    }
 
 
+  }
 
+  &__types {
+    display: flex;
+    margin: 0;
+    padding: 0 15px;
+    a {
+
+      display: flex;
+      white-space: nowrap;
+      padding: 15px 0;
+      color: $text-default-link;
+
+      &.active {
+        color: $black;
+        font-weight: 700;
+      }
+
+      &:not(.active) {
+        @include link-hover();
+      }
+    }
+    &-item-indent {
+      padding-top: 8px !important;
+    }
+  }
+}
 
 
 
