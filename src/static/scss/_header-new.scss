@@ -172,11 +172,7 @@ a.back-link {
     color: $link !important;
   }
 
-  .menu-before__content-links {
-    background-color: $white;
-/*!*    padding: 0 20px 20px;*!
-    max-width: 100%;*/
-  }
+
   .header__top {
     border-bottom: 1px solid #f7f7f7;
   }
@@ -190,6 +186,9 @@ a.back-link {
 
   .header__bottom {
     padding: 10px 0;
+    @include phones {
+      padding: 0;
+    }
   }
 
   .dropdown-user__link {
@@ -267,12 +266,15 @@ a.back-link {
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -17px;
     width: 1px;
     height: 14px;
     background-color: #8f8f8f;
     top: 50%;
     margin-top: -7px;
+    @include phones {
+      display: none;
+    }
   }
 
   .header__half:last-child:before {
@@ -830,11 +832,6 @@ a.back-link {
       display: none;
     }
 
-    &__main-wrap {
-      display: flex;
-      margin: 0;
-      padding: 0 15px;
-    }
 
 
 
@@ -844,7 +841,7 @@ a.back-link {
     }
 
     &__inner-text {
-      position: relative;
+   position: relative;
     }
 
     &__item {
@@ -892,6 +889,7 @@ a.back-link {
     &__content {
       display: none;
       z-index: 2;
+      width: 100%;
       padding-bottom: 20px;
       min-height: 90px;
       position: absolute;
@@ -909,6 +907,7 @@ a.back-link {
           @include link-hover();
           position: relative;
           color: $link;
+
         }
 
         label {
@@ -924,8 +923,11 @@ a.back-link {
         display: none;
         flex-wrap: wrap;
         margin: 0;
-        padding: 0;
         background-color: $white;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        max-width: 700px;
+        width: 100%;
 
         &.active {
           display: flex;
@@ -950,101 +952,77 @@ a.back-link {
     margin-bottom: 10px;
   }
 
-
-
-
-
-
-
-
-
-
-}
-.menu-before__main-wrap:before,
-.menu-before__main-wrap:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 100%;
-  z-index: 4;
-  background: linear-gradient(to right, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
-}
-
-.menu-before {
-  &__main-wrap {
-    padding-left: 0;
-    padding-right: 0;
-    position: relative;
-  }
-  &__main-wrap.menu-mobile .menu-before__outer-item:last-child {
-    padding-right: 15px;
-  }
-  &__main-wrap:before,
-  &__main-wrap:after {
-    content: '';
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 4;
-    background: linear-gradient(to right, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
-  }
-  &__main-wrap:after {
-    left: auto;
-    right: 0;
-    background: linear-gradient(to left, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
-  }
-  &__main-wrap.menu-mobile:before,
-  &__main-wrap.menu-mobile:after {
-    display: block;
-  }
-
-  &__wrap {
-    position: relative;
-  }
-
-  &__outer-item {
-    margin: 0 10px ;
-    list-style-type: none;
-    padding-left: 0;
-    &:first-child {
-      margin-left: 0;
+  .menu-before {
+    &__main-wrap {
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+    }
+    &__main-wrap.menu-mobile .menu-before__outer-item:last-child {
+      padding-right: 15px;
+    }
+    &__main-wrap:before,
+    &__main-wrap:after {
+      content: '';
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 100%;
+      z-index: 4;
+      background: linear-gradient(to right, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+    }
+    &__main-wrap:after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(to left, rgba(255,255,255,0.75) 75%,rgba(255,255,255,0) 100%);
+    }
+    &__main-wrap.menu-mobile:before,
+    &__main-wrap.menu-mobile:after {
+      display: block;
     }
 
+    &__wrap {
+      position: relative;
+    }
 
-  }
+    &__outer-item {
+      margin: 0 20px ;
+      list-style-type: none;
+      padding-left: 0;
+      &:first-child {
+        margin-left: 0;
+      }
 
-  &__types {
-    display: flex;
-    margin: 0;
-    padding: 0 15px;
-    a {
 
+    }
+
+    &__types {
       display: flex;
-      white-space: nowrap;
-      padding: 15px 0;
-      color: $text-default-link;
+      margin: 0;
+      padding: 0 15px;
+      a {
 
-      &.active {
-        color: $black;
-        font-weight: 700;
-      }
+        display: flex;
+        white-space: normal;
+        color: $text-default-link;
 
-      &:not(.active) {
-        @include link-hover();
+        &.active {
+          color: $black;
+          font-weight: 700;
+        }
+
+        &:not(.active) {
+          @include link-hover();
+        }
       }
-    }
-    &-item-indent {
-      padding-top: 8px !important;
+      &-item-indent {
+        padding-top: 8px !important;
+      }
     }
   }
+
+
+
 }
-
-
-
-

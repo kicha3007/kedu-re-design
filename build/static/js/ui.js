@@ -3,7 +3,7 @@ $(document).ready(function()
     /* HEADER SLIDER */
     var $search_bg = $('.search-bg');
 
-    /*if($search_bg.jquery) {
+/*    if($search_bg.jquery) {
         var $i = 0,
             $i_max = 7;
 
