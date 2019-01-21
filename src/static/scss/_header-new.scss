@@ -162,14 +162,25 @@ a.back-link {
 */
 
 .new-main {
+  .container-fluid {
+    padding: 0 60px;
+    @include laptop {
+      padding: 0 30px;
+    }
+  }
+
+  background-color: $text-news-card;
 
   .header__top {
     padding: 20px 0;
   }
 
 
+
+
   .menu-before__content-item a {
     color: $link !important;
+
   }
 
 
@@ -177,19 +188,12 @@ a.back-link {
     border-bottom: 1px solid #f7f7f7;
   }
 
-  header .container-fluid {
-    padding: 0 60px;
-    @include laptop {
-      padding: 0 30px;
-    }
+  header {
+    background-color: #ffffff;
   }
 
-  .header__bottom {
-    padding: 10px 0;
-    @include phones {
-      padding: 0;
-    }
-  }
+
+
 
   .dropdown-user__link {
     padding-left: 20px;
@@ -255,30 +259,6 @@ a.back-link {
     line-height: 1.5;
     font-size: 11px;
     margin-bottom: 10px;
-  }
-
-  .header__half {
-    position: relative;
-  }
-
-  .header__half:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -17px;
-    width: 1px;
-    height: 14px;
-    background-color: #8f8f8f;
-    top: 50%;
-    margin-top: -7px;
-    @include phones {
-      display: none;
-    }
-  }
-
-  .header__half:last-child:before {
-    display: none;
   }
 
 
@@ -824,6 +804,9 @@ a.back-link {
     }
 
   }
+  
+  
+  
   .menu-before {
     z-index: 2;
     position: relative;
@@ -832,17 +815,40 @@ a.back-link {
       display: none;
     }
 
-
-
+    &__border {
+      border-right: 1px solid $border-default-color;
+    }
 
     &__list {
       margin: 0;
       padding: 0;
     }
 
-    &__inner-text {
-   position: relative;
+
+
+    &__inner-list {
+      margin: 0;
+      padding: 20px 15px;
     }
+
+    &__inner-text {
+      position: relative;
+
+
+    }
+
+    &__link-text {
+      white-space: normal;
+      margin-right: 10px;
+      font-size: 13px;
+      color: $text-black;
+    }
+
+    &__link-numeric {
+      color: $text-default-link;
+    }
+
+
 
     &__item {
       list-style-type: none;
@@ -872,7 +878,7 @@ a.back-link {
       color: $text-default-link !important;
       font-size: 12px;
       letter-spacing: 0.5px;
-      padding: 13px 20px;
+      padding: 23px 20px;
       &.active {
         color: $black;
       }
@@ -890,19 +896,18 @@ a.back-link {
       display: none;
       z-index: 2;
       width: 100%;
-      padding-bottom: 20px;
+      padding: 0;
       min-height: 90px;
       position: absolute;
       top: 100%;
       left: 0;
       background: $bg-content-block;
-      border-top: 1px solid $link-line-solid;
-      border-bottom: 1px solid $link-line-solid;
+      border: 1px solid $border-default-color;
+
       &-item {
         list-style-type: none;
         padding-left: 0;
-        margin-top: 20px;
-        margin-right: 30px;
+        margin-bottom: 15px;
         a {
           @include link-hover();
           position: relative;
@@ -926,8 +931,8 @@ a.back-link {
         background-color: $white;
         padding-top: 20px;
         padding-bottom: 40px;
-        max-width: 700px;
-        width: 100%;
+        width: 700px;
+        max-width: 100%;
 
         &.active {
           display: flex;
@@ -991,10 +996,30 @@ a.back-link {
       margin: 0 20px ;
       list-style-type: none;
       padding-left: 0;
+      position: relative;
       &:first-child {
         margin-left: 0;
       }
 
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -17px;
+        width: 2px;
+        height: 14px;
+        background-color: $border-default-color;
+        top: 50%;
+        margin-top: -7px;
+        @include phones {
+          display: none;
+        }
+      }
+
+      &:last-child:before {
+        display: none;
+      }
 
     }
 
@@ -1005,8 +1030,9 @@ a.back-link {
       a {
 
         display: flex;
-        white-space: normal;
+        white-space: nowrap;
         color: $text-default-link;
+        line-height: 1.4;
 
         &.active {
           color: $black;

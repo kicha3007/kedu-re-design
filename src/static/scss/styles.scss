@@ -52,7 +52,8 @@
 @import "base";
 //@import "header";
 @import "header-new";
-@import "footer";
+//@import "footer";
+@import "footer-new";
 
 // Component styles
 @import "./components/breadcrumb";
@@ -81,6 +82,7 @@
 @import "./components/before-footer-container";
 @import "./components/search";
 @import "./components/nast-banner";
+@import "./components/offer";
 
 // Pages styles
 @import "./pages/styles";

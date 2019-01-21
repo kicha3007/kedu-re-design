@@ -18,6 +18,25 @@ body {
 	overflow-x: hidden;
 }
 
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
+
+.main-page__wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+
+}
+
+.main-page__content {
+	flex: 1 0 auto;
+
+}
+
 a {
 	letter-spacing: .3px;
 }

@@ -121,15 +121,15 @@ $(document).ready(function()
 
     /* BEFORE MENU */
 
-    var $menu_wrap = $('.menu-wrap'),
-        $menuBeforeLink = $('a.menu-before__link'),
+    // var $menu_wrap = $('.menu-wrap');
+    var    $menuBeforeLink = $('a.menu-before__link'),
         $content = $('.menu-before__content'),
         $contentLinks = $('.menu-before__content-links');
 
     function changeVisible () {
         $content.hide();
         $contentLinks.removeClass('active');
-        $menu_wrap.removeClass("children-hide");
+        // $menu_wrap.removeClass("children-hide");
     }
 
 
@@ -138,10 +138,13 @@ $(document).ready(function()
             $contentBlockOb = $('#'+$contentBlockId);
 
         if($(this).hasClass('dropdown__link')) {
-            $menu_wrap.addClass("children-hide");
+            // $menu_wrap.addClass("children-hide");
             $contentLinks.removeClass('active');
             $contentBlockOb.addClass('active'); // show active links
-            $content.show();
+
+            $contentActive = $contentBlockOb.closest(".menu-before__content");
+            $content.hide();
+            $contentActive.show();
         } else {
             changeVisible();
         }
