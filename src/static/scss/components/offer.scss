@@ -1,0 +1,27 @@
+.offer {
+  background-color: $text-statistic-color;
+}
+
+.offer__half--left {
+  color: $text-info-gray-color;
+}
+
+.offer__wrap {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.offer__list {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.offer__item {
+  color: $bg-block-background-color;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.offer__title {
+  font-size: 13px;
+}
