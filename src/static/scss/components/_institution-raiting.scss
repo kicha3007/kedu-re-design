@@ -1,0 +1,176 @@
+
+.institution-raiting__wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.institution-raiting__Item {
+  list-style-type: none;
+  padding-left: 0;
+  border: 1px solid $text-news-card;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.institution-raiting__half {
+  padding: 17px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  @include phones {
+    flex-basis: 100%;
+  }
+}
+
+.institution-raiting__half--left {
+
+  justify-content: center;
+  align-items: flex-start;
+  border-right: 1px solid $text-news-card;
+  flex-basis: 40px;
+  @include phones {
+    justify-content: flex-start;
+    border-right: none;
+    border-bottom: 1px solid $text-news-card;
+  }
+}
+
+.institution-raiting__half--right {
+  flex-basis: 150px;
+  flex-grow: 1;
+}
+
+
+.institution-raiting__points-numeric {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: $text-progress;
+}
+
+.institution-raiting__points-text {
+  font-size: 11px;
+  color: $text-default-link;
+}
+
+.institution-raiting__title {
+  font-size: 13px;
+  color: $text-black;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1.4;
+  @include link-hover();
+}
+
+
+
+.institution-raiting__img-box {
+  max-width: 47px;
+  max-height: 47px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 40px;
+}
+
+.institution-raiting__content {
+  flex-basis: 150px;
+  flex-grow: 1;
+  padding-left: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.institution-raiting__list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px -8px;
+}
+
+.institution-raiting__list-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 8px 8px;
+
+}
+
+.institution-raiting__bottom-half {
+  margin: 0 8px 8px;
+  overflow: hidden;
+}
+
+.institution-raiting__bottom-half--left {
+  flex-grow: 1;
+}
+
+.institution-training__stars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.institution-training__stars-img-box {
+  max-width: 14px;
+  max-height: 11px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 11px;
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.institution-training__star-text {
+  color: $text-black;
+  flex-basis: 1px;
+  white-space: nowrap;
+  flex-grow: 1;
+  @include link-hover();
+}
+
+.institution-raiting__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px -8px;
+}
+
+.institution-raiting__link {
+  color: #000;
+  @include link-hover();
+}
+
+.institution-raiting__text {
+  color: $text-news-card ;
+  font-size: 14px;
+  line-height: 1.5;
+  
+}
+
+.institution-raiting__Item--border-color {
+  border-color: $text-progress;
+}
+
+.institution-raiting__half--border-hide {
+  border-right: none;
+}
+
+.institution-raiting__half--size-1 {
+  flex-grow: 1;
+}
+
+.institution-raiting__half--size-2 {
+  max-width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-start;
+}

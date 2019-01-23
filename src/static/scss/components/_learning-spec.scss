@@ -1,6 +1,5 @@
 
-
-.sub-nav {
+.learning-spec {
   padding: 30px 0;
   border-top: 1px solid $link-line-solid;
   background: $bg-content-block;
@@ -55,4 +54,14 @@
   &__half-bottom span {
     color: $text-black;
   }
+
+  &__btn {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
+
+
+
+
+

@@ -24,6 +24,19 @@ html {
 	width: 100%;
 }
 
+.all-title {
+	padding-bottom: 30px;
+	color: $text-news-card;
+	font-size: 18px;
+}
+
+.all-title__link {
+	color: $text-black;
+	font-size: 18px;
+	margin: 0 4px;
+	@include link-hover();
+}
+
 .main-page__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -34,6 +47,7 @@ html {
 
 .main-page__content {
 	flex: 1 0 auto;
+	background-color: $white;
 
 }
 
@@ -70,4 +84,32 @@ h1, a, p {
 }
 ::-webkit-scrollbar-thumb:active {
 	background: darken(#81afd5, 5%);
+}
+
+
+
+.third-block {
+	border-bottom: 1px solid $border-default-color;
+}
+
+.border--right {
+	border-right: 1px solid $border-default-color;
+
+	@include phones {
+		border-right: none;
+	}
+}
+
+.four-block {
+	border-bottom: 1px solid $border-default-color;
+}
+
+.border--bottom {
+	border-bottom: 1px solid $border-default-color;
+}
+
+.border--right-md-none {
+	@include laptop {
+		border-right: none;
+	}
 }
