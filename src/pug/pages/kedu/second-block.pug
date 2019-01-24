@@ -1,9 +1,9 @@
-.container-fluid.second-block.overflow-hidden.mb-5
+.container-fluid.second-block.overflow-hidden.mb-4.pt-4.border--top
 	.container
 		.row.mb-n4
 			.col-24.col-sm-10.col-xl-4.border--right.mb-4
 				.sub-nav__menu-inner-wrap
-					.sub-nav__menu-title
+					a(href="#").sub-nav__menu-title
 						|  Направления
 					ul.sub-nav__menu-list
 						li.sub-nav__menu-item
@@ -55,11 +55,11 @@
 								span.sub-nav__numeric
 									|  80
 					.sub-nav__buttons
-						a(href="#").sub-nav__btn.btn-active
+						a(href="#").sub-nav__btn.btn-more
 							|  Все направления
 			.col-24.col-sm-14.col-xl-5.d-flex.justify-content-sm-center.mb-4
 				sub-nav__menu-inner-wrap
-					.sub-nav__menu-title
+					a(href="#").sub-nav__menu-title
 						|  Виды образования
 					ul.sub-nav__menu-list
 						li.sub-nav__menu-item
@@ -99,7 +99,7 @@
 								span.sub-nav__text
 									|  Платные курсы
 					.sub-nav__buttons
-						a(href="#").sub-nav__btn.btn-active
+						a(href="#").sub-nav__btn.btn-more
 							|  Все направления
 			.col-24.col-xl-15.mb-5
 				include training

@@ -342,3 +342,39 @@
         cursor: default;
     }
 }
+
+
+
+.bx_filter--mod1 {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    display: inline-block;
+}
+.bx_filter .bx_filter_section--mod1 {
+    width: auto;
+}
+
+.bx_filter .bx_filter_select_text--mod1 {
+    padding: 0;
+    text-align: left;
+    border: none;
+    overflow:  auto;
+}
+
+.bx_filter .bx_filter_select_text--mod1:after {
+    position: static;
+}
+
+.bx_filter .bx_filter_parameters_box.bx_filter_parameters_box--mod1 {
+    margin-top: 0;
+    padding: 0;
+}
+
+.bx_filter  .bx_filter_block--mod1 {
+    margin-top: 0;
+}
+
+.bx_filter .bx_filter_parameters_box_container--mod1 {
+    padding: 0;
+}

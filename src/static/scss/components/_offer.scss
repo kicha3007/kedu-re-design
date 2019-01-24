@@ -1,6 +1,5 @@
 .offer {
   background-color: $text-statistic-color ;
-  margin-bottom: 30px;
 }
 
 .offer__half--left {
@@ -10,6 +9,7 @@
 .offer__wrap {
   padding-top: 30px;
   padding-bottom: 30px;
+  position: relative;
 }
 
 .offer__list {
@@ -25,4 +25,21 @@
 
 .offer__title {
   font-size: 13px;
+}
+
+.offer__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.offer__close-img-box {
+  margin-right: 4px;
+}
+
+.offer__close-text {
+  color: $text-default-link;
 }

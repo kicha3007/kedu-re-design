@@ -1,11 +1,13 @@
 section.institution-raiting
-   .all-title
-      |  Рейтинг учебных заведений по
-      a(href="#").all-title__link
-         | оцнкам пользователей
-      | в
-      a(href="#").all-title__link
-         | Нижнем новгороде
+   .all-title.d-flex
+      span.all-title__text
+         |  Рейтинг учебных заведений по
+      include filter
+      span.all-title__text
+         | в
+      a(href="#" data-toggle="modal" data-target="#city_select_modal").all-title__link
+         | Нижнем Новгороде
+         i.zmdi.zmdi-chevron-down
    ul.institution-raiting__wrap
       li.institution-raiting__Item
          .institution-raiting__half.institution-raiting__half--left
@@ -107,5 +109,5 @@ section.institution-raiting
                | в Нижнем Новгороде.
          .institution-raiting__half.institution-raiting__half--right.institution-raiting__half--size-2
             .institution-raiting__buttons
-               a(href="#").institution-raiting__btn.btn-active
+               a(href="#").institution-raiting__btn.btn-more
                   |  Смотреть все рейтинги

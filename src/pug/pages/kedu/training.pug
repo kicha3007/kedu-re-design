@@ -1,4 +1,11 @@
 .training
+	.all-title.training__top-title.d-flex
+		span.all-title__text
+			|  Популярные
+		include filter
+		a(href="#" data-toggle="modal" data-target="#city_select_modal").all-title__link
+			| Нижнем Новгороде
+			i.zmdi.zmdi-chevron-down
 	ul.training__wrap.owl-carousel(data-owl-carousel data-owl-items="4" data-owl-items-pad="3" )
 		li.training__item
 			.training__img-box
@@ -13,7 +20,7 @@
 						|  0
 					span.training__ruble-text
 						|    рублей
-				.training__stars
+				a(href="#").training__stars
 					.training__stars-img-box
 						img.training__stars__img(src="static/images/ui/icon/star.svg", alt='')
 					.training__star-text
@@ -23,7 +30,7 @@
 						img.training__view-img(src="static/images/ui/icon/eye.svg", alt='')
 					.training__view-text
 						|  2,2K
-			.training__bottom
+			a(href="#").training__bottom
 				.training__bottom-img-box
 					img.training__bottom-img(src="static/images/content/training/2.png", alt='')
 				.training__bottom-text
@@ -41,7 +48,7 @@
 						|  0
 					span.training__ruble-text
 						|    рублей
-				.training__stars
+				a(href="#").training__stars
 					.training__stars-img-box
 						img.training__stars__img(src="static/images/ui/icon/star.svg", alt='')
 					.training__star-text
@@ -51,7 +58,7 @@
 						img.training__view-img(src="static/images/ui/icon/eye.svg", alt='')
 					.training__view-text
 						|  2,2K
-			.training__bottom
+			a(href="#").training__bottom
 				.training__bottom-img-box
 					img.training__bottom-img(src="static/images/content/training/2.png", alt='')
 				.training__bottom-text
@@ -69,7 +76,7 @@
 						|  0
 					span.training__ruble-text
 						|    рублей
-				.training__stars
+				a(href="#").training__stars
 					.training__stars-img-box
 						img.training__stars__img(src="static/images/ui/icon/star.svg", alt='')
 					.training__star-text
@@ -79,7 +86,7 @@
 						img.training__view-img(src="static/images/ui/icon/eye.svg", alt='')
 					.training__view-text
 						|  2,2K
-			.training__bottom
+			a(href="#").training__bottom
 				.training__bottom-img-box
 					img.training__bottom-img(src="static/images/content/training/2.png", alt='')
 				.training__bottom-text
@@ -97,7 +104,7 @@
 						|  0
 					span.training__ruble-text
 						|    рублей
-				.training__stars
+				a(href="#").training__stars
 					.training__stars-img-box
 						img.training__stars__img(src="static/images/ui/icon/star.svg", alt='')
 					.training__star-text
@@ -107,7 +114,7 @@
 						img.training__view-img(src="static/images/ui/icon/eye.svg", alt='')
 					.training__view-text
 						|  2,2K
-			.training__bottom
+			a(href="#").training__bottom
 				.training__bottom-img-box
 					img.training__bottom-img(src="static/images/content/training/2.png", alt='')
 				.training__bottom-text
@@ -125,7 +132,7 @@
 						|  0
 					span.training__ruble-text
 						|    рублей
-				.training__stars
+				a(href="#").training__stars
 					.training__stars-img-box
 						img.training__stars__img(src="static/images/ui/icon/star.svg", alt='')
 					.training__star-text
@@ -135,11 +142,11 @@
 						img.training__view-img(src="static/images/ui/icon/eye.svg", alt='')
 					.training__view-text
 						|  2,2K
-			.training__bottom
+			a(href="#").training__bottom
 				.training__bottom-img-box
 					img.training__bottom-img(src="static/images/content/training/2.png", alt='')
 				.training__bottom-text
 					|  Высшая школа Среда обучения
 	.training__buttons
-		a(href="#").training__btn.btn-active
+		a(href="#").training__btn.btn-more
 			|	Все курсы

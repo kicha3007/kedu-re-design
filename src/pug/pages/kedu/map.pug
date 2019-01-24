@@ -1,12 +1,14 @@
 section.map
-   .all-title
-      |  Все
-      a(href="#").all-title__link
-         | учебные заведения
-      | в
-      a(href="#").all-title__link
-         | Нижнем новгороде
+   .all-title.d-flex
+      span.all-title__text
+         |  Все
+      include filter
+      span.all-title__text
+         | в
+      a(href="#" data-toggle="modal" data-target="#city_select_modal").all-title__link
+         | Нижнем Новгороде
+         i.zmdi.zmdi-chevron-down
    .map__wrap
    .map__buttons
-      a(href="#").map__btn.btn-active
+      a(href="#").map__btn.btn-more
          |  Все учебные заведения в Нижнем новгороде

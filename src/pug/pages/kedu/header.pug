@@ -38,11 +38,13 @@
 						.dropdown-user
 							a.dropdown-user__link.open-auth-modal(href='#', role='button')
 								span(style="background-image: url('static/images/ui/icon/default-user.svg');")
+								.dropdown-user__text
+									| Мое образование
 					.col-auto.d-sm-none.order-4
 						button.btn.btn-active.btn-menu(data-trigger='') Меню
 					.header__top-half.col-auto.order-7
 						a(href="#")
-							| Мое образование
+
 		.header__bottom
 			.container-fluid
 				.row.align-items-center
@@ -58,7 +60,7 @@
 						.menu-before__main-wrap(data-scroll-outer-wrap='')
 							.menu-before__wrap(data-scroll-wrap-x='')
 								.menu-before__types
-									.menu-before__outer-item
+									.menu-before__outer-item(data-menu-content-wrap)
 										#kedu_before_header_menu_frame
 											// 'start_frame_cache_kedu_before_header_menu_frame'
 											section(data-it-menu='')
@@ -66,22 +68,22 @@
 													.menu-before
 														ul.d-flex.align-items-center.h-100.menu-before__list
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='menu_before_content_block_0')
+																a.dropdown__link.menu-before__link( data-menu-link href='/edutypes', data-toggle='menu_before_content_block_0')
 																	span.menu-before__inner-text
 																		| Виды образования
 																		i.zmdi.zmdi-chevron-down
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='menu_before_content_block_1')
+																a.dropdown__link.menu-before__link( data-menu-link href='/moskva/directions-of-training', data-toggle='menu_before_content_block_1')
 																	span.menu-before__inner-text
 																		| Направления
 																		i.zmdi.zmdi-chevron-down
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/centers', data-toggle='menu_before_content_block_2')
+																a.dropdown__link.menu-before__link( data-menu-link href='/moskva/centers', data-toggle='menu_before_content_block_2')
 																	span.menu-before__inner-text
 																		| Учебные заведения
 																		i.zmdi.zmdi-chevron-down
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_0.menu-before__content-links
+													.container#menu_before_content_block_0.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -148,7 +150,7 @@
 																			span.menu-before__link-numeric
 																				|   66
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_1.menu-before__content-links
+													.container#menu_before_content_block_1.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -215,7 +217,7 @@
 																			span.menu-before__link-numeric
 																				|   66
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_2.menu-before__content-links
+													.container#menu_before_content_block_2.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -281,7 +283,7 @@
 																				|   Детские сады3
 																			span.menu-before__link-numeric
 																				|   66
-									.menu-before__outer-item
+									.menu-before__outer-item(data-menu-content-wrap)
 										#kedu_before_header_menu_frame2
 											// 'start_frame_cache_kedu_before_header_menu_frame'
 											section(data-it-menu='')
@@ -289,22 +291,22 @@
 													.menu-before
 														ul.d-flex.align-items-center.h-100.menu-before__list
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='menu_before_content_block_3')
+																a.dropdown__link.menu-before__link( data-menu-link href='/edutypes', data-toggle='menu_before_content_block_3')
 																	span.menu-before__inner-text
 																		| Виды образования
 																		i.zmdi.zmdi-chevron-down
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='menu_before_content_block_4')
+																a.dropdown__link.menu-before__link( data-menu-link href='/moskva/directions-of-training', data-toggle='menu_before_content_block_4')
 																	span.menu-before__inner-text
 																		| Направления
 																		i.zmdi.zmdi-chevron-down
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/centers', data-toggle='menu_before_content_block_5')
+																a.dropdown__link.menu-before__link( data-menu-link href='/moskva/centers', data-toggle='menu_before_content_block_5')
 																	span.menu-before__inner-text
 																		| Учебные заведения
 																		i.zmdi.zmdi-chevron-down
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_3.menu-before__content-links
+													.container#menu_before_content_block_3.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -371,7 +373,7 @@
 																			span.menu-before__link-numeric
 																				|   66
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_4.menu-before__content-links
+													.container#menu_before_content_block_4.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -438,7 +440,7 @@
 																			span.menu-before__link-numeric
 																				|   66
 												.menu-before__content(data-it-menu-before-content='' )
-													.container#menu_before_content_block_5.menu-before__content-links
+													.container#menu_before_content_block_5.menu-before__content-links(data-menu-links)
 														.row
 															.col-sm-10.menu-before__border
 																ul.menu-before__inner-list
@@ -504,22 +506,22 @@
 																				|   Детские сады3
 																			span.menu-before__link-numeric
 																				|   66
-									.menu-before__outer-item
+									.menu-before__outer-item(data-menu-content-wrap)
 										#kedu_before_header_menu_frame3
 											section(data-it-menu='')
 												.menu-before__outer-wrap
 													.menu-before
 														ul.d-flex.align-items-center.h-100.menu-before__list
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/edutypes', data-toggle='')
+																a.dropdown__link.menu-before__link(  href='/edutypes', data-toggle='')
 																	span.menu-before__inner-text
 																		| ГДЗ
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/directions-of-training', data-toggle='')
+																a.dropdown__link.menu-before__link( href='/moskva/directions-of-training', data-toggle='')
 																	span.menu-before__inner-text
 																		| Профгид
 															li.menu-before__item
-																a.dropdown__link.menu-before__link(href='/moskva/centers', data-toggle='')
+																a.dropdown__link.menu-before__link(  href='/moskva/centers', data-toggle='')
 																	span.menu-before__inner-text
 																		| Преподаватели
 										#kedu_before_header_mobile_menu_frame

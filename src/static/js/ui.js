@@ -121,43 +121,41 @@ $(document).ready(function()
 
     /* BEFORE MENU */
 
-    var $menu_wrap = $('.menu-wrap'),
-        $menuBeforeLink = $('a.menu-before__link'),
-        $content = $('.menu-before__content'),
-        $contentLinks = $('.menu-before__content-links');
+    var $menuBeforeLink = $('[data-menu-link]'),
+        $content = $('[data-it-menu-before-content]'),
+        $contentWrap = $('[data-menu-content-wrap]'),
+        $contentLinks = $('[data-menu-links]');
 
     function changeVisible () {
         $content.hide();
         $contentLinks.removeClass('active');
-        $menu_wrap.removeClass("children-hide");
     }
-
 
     $menuBeforeLink.on('mouseenter', function() {
         var $contentBlockId = $(this).data('toggle'),
-            $contentBlockOb = $('#'+$contentBlockId);
+            $contentBlockOb = $('#'+$contentBlockId),
+            $this = $(this);
 
-        if($(this).hasClass('dropdown__link')) {
-            $menu_wrap.addClass("children-hide");
+        if($this.hasClass('dropdown__link')) {
             $contentLinks.removeClass('active');
             $contentBlockOb.addClass('active'); // show active links
-            $content.show();
+            $contentBlockOb.closest($content).show();
         } else {
             changeVisible();
         }
 
     });
 
-    $content.on('mouseleave', function(){
+    $contentWrap.on('mouseleave', function(){
         changeVisible();
     });
 
-    var menuWrap = document.querySelector('[data-it-menu]');
+/*    var menuWrap = document.querySelector('[data-it-menu]');
     document.onclick = function(event) {
         if(!menuWrap.contains(event.target)) {
-            $("[data-it-menu-before-content]").css("display", "none");
+            $content.css("display", "none");
         }
-    }
+    }*/
 
     /* ------------------- dropdown-menu  ------------------- */
 
@@ -296,5 +294,9 @@ $(document).ready(function()
     }
 
     startCarousel();
+
+    $("[data-offer-close]").on("click", function () {
+         $("[data-offer]").remove();
+    });
 
 });

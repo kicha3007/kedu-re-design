@@ -2,10 +2,12 @@
    .container.pb-5.border--bottom.overflow-hidden
       .row.mb-n4
          .col-lg-12.mb-4.border--right.border--right-md-none
-            .all-title
-               |  Обучение рабочим специальностям в
-               a(href="#").all-title__link
+            .all-title.d-flex
+               span.all-title__text
+                 |  Обучение рабочим специальностям в
+               a(href="#" data-toggle="modal" data-target="#city_select_modal").dropdown-blue__link.all-title__link
                   | Нижнем Новгороде
+                  i.zmdi.zmdi-chevron-down
             .row
                .col
                   .learning-spec__menu-inner-wrap
@@ -72,7 +74,7 @@
                               span.learning-spec__text
                                  |  Фотооператор
                      .learning-spec__buttons
-                        a(href="#").learning-spec__btn.btn-active
+                        a(href="#").learning-spec__btn.btn-more
                            |  Смотреть все 5118 рабочих специальностей
          .col-lg-12.mb-4
             include doing

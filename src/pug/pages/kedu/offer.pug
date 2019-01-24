@@ -1,6 +1,11 @@
-.container-fluid.offer
+.container-fluid.offer(data-offer)
 	.container.overflow-hidden
 		.row.offer__wrap.mb-n4
+			.offer__close(data-offer-close)
+				.offer__close-img-box
+					img(src="static/images/ui/icon/close.svg", alt='').offer__close-img
+				.offer__close-text
+					|	Закрыть
 			.col-sm-24.col-md-12.flex-row.d-flex.mb-4
 				.container.flex-row.d-flex
 					.row.mb-n3
