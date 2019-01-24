@@ -4,61 +4,62 @@
   border-top: 1px solid $link-line-solid;
   background: $bg-content-block;
   line-height: 1.5em;
+}
 
-  &__menu-inner-wrap + .footer__menu-inner-wrap {
-    margin-top: 30px;
-  }
+.learning-spec__menu-inner-wrap + .footer__menu-inner-wrap {
+  margin-top: 30px;
+}
 
-  &__menu-list {
-    margin: 0 0 20px;
-    padding: 0;
-  }
-  &__numeric {
-    color: $text-default-link;
-    font-size: 13px;
-  }
+.learning-spec__menu-list {
+  margin: 0 0 20px;
+  padding: 0;
+}
 
-  &__text + .sub-nav__numeric {
-    margin-left: 5px;
-    font-size: 13px;
+.learning-spec__numeric {
+  color: $text-default-link;
+  font-size: 13px;
+}
 
-  }
+.learning-spec__text + .sub-nav__numeric {
+  margin-left: 5px;
+  font-size: 13px;
 
-  &__menu-item {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 12px;
-    line-height: 1.5;
-  }
+}
 
-  &__menu-title {
-    font-size: 18px;
-    color: $text-news-card;
-    margin-bottom: 25px;
-  }
+.learning-spec__menu-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
 
-  &__menu-link {
-    @include link-hover();
+.learning-spec__menu-title {
+  font-size: 18px;
+  color: $text-news-card;
+  margin-bottom: 25px;
+}
 
-    color: $text-black;
-    font-size: 13px;
-  }
+.learning-spec__menu-link {
+  @include link-hover();
 
-  &__half-bottom {
-    font-size: 13px;
-    color: $text-news-card;
-    line-height: 1.7;
-    min-height: 63px;
-  }
+  color: $text-black;
+  font-size: 13px;
+}
 
-  &__half-bottom span {
-    color: $text-black;
-  }
+.learning-spec__half-bottom {
+  font-size: 13px;
+  color: $text-news-card;
+  line-height: 1.7;
+  min-height: 63px;
+}
 
-  &__btn {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
+.learning-spec__half-bottom span {
+  color: $text-black;
+}
+
+.learning-spec__btn {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 

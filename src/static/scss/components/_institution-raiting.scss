@@ -7,7 +7,8 @@
 .institution-raiting__Item {
   list-style-type: none;
   padding-left: 0;
-  border: 1px solid $text-news-card;
+  border: 1px solid $border-default-color;
+  border-radius: $base-border-radius;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 15px;
@@ -26,7 +27,7 @@
 
   justify-content: center;
   align-items: flex-start;
-  border-right: 1px solid $text-news-card;
+  border-right: 1px solid $border-default-color;
   flex-basis: 40px;
   @include phones {
     justify-content: flex-start;
@@ -156,7 +157,7 @@
 }
 
 .institution-raiting__Item--border-color {
-  border-color: $text-progress;
+  border-color: $border-light-color;
 }
 
 .institution-raiting__half--border-hide {

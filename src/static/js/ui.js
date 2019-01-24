@@ -150,12 +150,12 @@ $(document).ready(function()
         changeVisible();
     });
 
-/*    var menuWrap = document.querySelector('[data-it-menu]');
+    var menuWrap = document.querySelector('[data-it-menu]');
     document.onclick = function(event) {
         if(!menuWrap.contains(event.target)) {
             $content.css("display", "none");
         }
-    }*/
+    }
 
     /* ------------------- dropdown-menu  ------------------- */
 
