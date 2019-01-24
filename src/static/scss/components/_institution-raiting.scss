@@ -32,7 +32,7 @@
   @include phones {
     justify-content: flex-start;
     border-right: none;
-    border-bottom: 1px solid $text-news-card;
+    border-bottom: 1px solid $border-default-color;
   }
 }
 
