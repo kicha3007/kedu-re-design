@@ -4,11 +4,9 @@
   margin: 0 0 20px;
   padding: 0 ;
   position: relative;
-  @include laptop {
-    padding-top: 40px;
-  }
   @include phones {
     max-width: 220px;
+    padding-top: 40px;
   }
 }
 
@@ -16,7 +14,7 @@
   padding-right: 110px;
   display: flex;
   flex-wrap: wrap;
-  @include laptop {
+  @include tablets {
     padding-right: 0;
   }
 }
@@ -185,8 +183,8 @@
   border-radius: 50%;
   border: none;
   outline: none;
-  @include laptop {
-      top: -20px;
+  @include phones {
+      top: -10px;
   }
 }
 
