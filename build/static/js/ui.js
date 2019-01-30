@@ -186,7 +186,7 @@ $(document).ready(function()
 
 
 
-    var perfectScrollContainersX = $('[data-scroll-wrap-x]'),
+   /* var perfectScrollContainersX = $('[data-scroll-wrap-x]'),
         perfectScrollContainersY = $('[data-scroll-wrap-y]'),
         PerfectScrollbarElementY,
         PerfectScrollbarElementX,
@@ -197,7 +197,9 @@ $(document).ready(function()
 
             $.each(perfectScrollContainersX, function(indx, value){
                 var $this = $(value);
+
                 var perfectScrollContainersXwidtn = +$this.get(0).scrollWidth - +$this.get(0).clientWidth;
+                console.log(perfectScrollContainersXwidtn);
 
                 if (perfectScrollContainersXwidtn && !$this.hasClass("ps")) {
 
@@ -208,7 +210,8 @@ $(document).ready(function()
                         wheelSpeed: 0.2
                     });
                     perfectScrollOuterWrap.addClass("menu-mobile");
-                } else if (typeof PerfectScrollbarElementX != "undefined" && !perfectScrollContainersXwidtn) {
+                }
+                 else  if (typeof PerfectScrollbarElementX != "undefined" && !perfectScrollContainersXwidtn) {
                     PerfectScrollbarElementX.destroy();
                     perfectScrollOuterWrap.removeClass("menu-mobile");
                 }
@@ -245,7 +248,44 @@ $(document).ready(function()
         perfectScrollStart();
     });
 
-    perfectScrollStart();
+    perfectScrollStart();*/
+
+
+    (function(){
+
+        var swiperContainersX = $('[data-scroll-wrap-x]');
+        var swiper;
+
+        function startSwiper() {
+
+            $.each(swiperContainersX, function(indx, value){
+                var $this = $(value);
+
+                var swiperContainersXwidth = +$this.get(0).scrollWidth - +$this.get(0).clientWidth;
+
+                if (swiperContainersXwidth && !$this.hasClass("swiper-container-horizontal") ) {
+
+                    swiper = new Swiper('.swiper-container', {
+                        scrollbar: {
+                            el: '.swiper-scrollbar'
+                        },
+                        freeMode: true,
+                        slidesPerView: 'auto',
+                        // width: 60
+                    });
+
+                } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth) {
+                    swiper.destroy();
+                };
+            });
+        };
+
+        $(window).on('load resize', function () {
+            startSwiper();
+        });
+
+    })();
+
 
     $("[data-to-top-button]").on("click", function () {
         $("html, body").animate({scrollTop: 0}, 500);

@@ -1,0 +1,17 @@
+.container-fluid.raiting-title(data-offer)
+	.container
+		.raiting-title__wrap
+			.raiting-title__close(data-offer-close)
+				.raiting-title__close-img-box
+					img(src="static/images/ui/icon/close.svg", alt='').raiting-title__close-img
+				.raiting-title__close-text
+					|	Закрыть
+			h1.raiting-title__title
+				span.raiting-title__text
+					|	ВУЗы в
+				a(href="#" data-toggle="modal" data-target="#city_select_modal").raiting-title__link
+					| Тюмени
+					i.zmdi.zmdi-chevron-down
+			.raiting-title__subtitle
+				|	рейтинг вузов
+			

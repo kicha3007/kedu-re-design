@@ -1,0 +1,236 @@
+
+.raitings__wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.raitings__Item {
+  list-style-type: none;
+  padding-left: 0;
+  border: 1px solid $border-default-color;
+  border-radius: $base-border-radius;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.raitings__half {
+  padding: 17px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include phones {
+    flex-basis: 100%;
+  }
+}
+
+.raitings__half--left {
+  padding: 17px 10px;
+  justify-content: center;
+  align-items: flex-start;
+  border-right: 1px solid $border-default-color;
+  flex-basis: 40px;
+  @include phones {
+    justify-content: flex-start;
+    border-right: none;
+    border-bottom: 1px solid $border-default-color;
+  }
+}
+
+.raitings__half--right {
+  flex-basis: 150px;
+  flex-grow: 1;
+  margin-bottom: -20px;
+}
+
+.raitings__points-numeric {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: $text-progress;
+}
+
+.raitings__points-text {
+  font-size: 11px;
+  color: $text-default-link;
+}
+
+.raitings__title {
+  font-size: 13px;
+  color: $text-black;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1.4;
+  @include link-hover();
+}
+
+.raitings__img-box {
+  max-width: 47px;
+  max-height: 47px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 40px;
+}
+
+.raitings__content {
+  flex-basis: 150px;
+  flex-grow: 1;
+  padding-left: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.raitings__list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px -8px;
+}
+
+.raitings__list-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 8px 8px;
+
+}
+
+.raitings__bottom-half {
+  margin: 0 8px 8px;
+  overflow: hidden;
+}
+
+.raitings__bottom-half--left {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.institution-training__stars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.institution-training__stars-img-box {
+  max-width: 14px;
+  max-height: 11px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 11px;
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.institution-training__star-text {
+  color: $text-black;
+  flex-basis: 1px;
+  white-space: nowrap;
+  flex-grow: 1;
+  @include link-hover();
+}
+
+.raitings__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px -8px;
+}
+
+.raitings__link {
+  color: $link;
+  @include link-hover();
+}
+
+.raitings__text {
+  color: $text-news-card;
+  font-size: 14px;
+  line-height: 1.5;
+
+}
+
+.raitings__half--border-hide {
+  border-right: none;
+}
+
+.raitings__inner-half {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  @include phones {
+    width: 100%;
+  }
+
+
+}
+
+.raitings__inner-half--left {
+  border-right: 1px solid $border-light-color;
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 58%;
+}
+
+.raitings__inner-half--right {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 42%;
+  overflow: hidden;
+}
+
+.raitings__number {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 -4px -8px;
+  justify-content: space-between;
+}
+
+.raitings__number-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 4px 8px;
+}
+
+.raitings__number-text {
+  font-size: 11px;
+  color: $text-default-link;
+  margin-bottom: 5px;
+}
+
+.raitings__number-numeric {
+  font-size: 24px;
+  font-weight: 300;
+  color: $text-progress;
+}
+
+.raitings__number-numeric--color-1 {
+  color: $button-dark-orange;
+}
+
+.raitings__number-numeric--color-2 {
+  color: $link-danger;
+}
+
+.raitings__number-numeric--color-3 {
+  color: $notifitacion-green;
+}
+
+.raitings__location {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.raitings__location-text {
+  margin-left: 7px;
+}

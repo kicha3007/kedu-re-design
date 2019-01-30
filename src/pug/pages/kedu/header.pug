@@ -58,9 +58,9 @@
 								| учебного центра?
 					.col-lg-19.col-xl-21.col-24
 						.menu-before__main-wrap(data-scroll-outer-wrap='')
-							.menu-before__wrap(data-scroll-wrap-x='')
-								.menu-before__types
-									.menu-before__outer-item(data-menu-content-wrap)
+							.menu-before__wrap.swiper-container(data-scroll-wrap-x='')
+								.menu-before__types.swiper-wrapper
+									.menu-before__outer-item(data-menu-content-wrap).swiper-slide
 										#kedu_before_header_menu_frame
 											// 'start_frame_cache_kedu_before_header_menu_frame'
 											section(data-it-menu='')
@@ -283,7 +283,7 @@
 																				|   Детские сады3
 																			span.menu-before__link-numeric
 																				|   66
-									.menu-before__outer-item(data-menu-content-wrap)
+									.menu-before__outer-item(data-menu-content-wrap).swiper-slide
 										#kedu_before_header_menu_frame2
 											// 'start_frame_cache_kedu_before_header_menu_frame'
 											section(data-it-menu='')
@@ -506,7 +506,7 @@
 																				|   Детские сады3
 																			span.menu-before__link-numeric
 																				|   66
-									.menu-before__outer-item(data-menu-content-wrap)
+									.menu-before__outer-item(data-menu-content-wrap).swiper-slide
 										#kedu_before_header_menu_frame3
 											section(data-it-menu='')
 												.menu-before__outer-wrap
@@ -604,3 +604,4 @@
 																a.change-city-link(href='/tyumen/school') Школы
 															li
 																a.change-city-link(href='/tyumen/kindergarten') Детские сады
+								.swiper-scrollbar
