@@ -74,6 +74,12 @@
   justify-content: center;
   align-items: center;
   flex-basis: 40px;
+  @include phones {
+      width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .raitings__content {

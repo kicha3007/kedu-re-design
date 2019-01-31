@@ -115,6 +115,8 @@
     }
     .bx_filter_parameters_box_title-text {
         position: relative;
+        font-weight: 700;
+        line-height: 1.4;
     }
 
     .bx_filter_parameters_box .bx_filter_parameters_box_title-text::after{
@@ -345,11 +347,11 @@
 
 
 
-.bx_filter--mod1 {
+.bx_filter.bx_filter--mod1 {
     border: none;
     border-radius: 0;
     padding: 0;
-    display: inline-block;
+    display: block;
 }
 .bx_filter .bx_filter_section--mod1 {
     width: auto;
@@ -377,4 +379,8 @@
 
 .bx_filter .bx_filter_parameters_box_container--mod1 {
     padding: 0;
+}
+
+.bx_filter_parameters_box_container .checkbox {
+    margin-bottom: 10px;
 }

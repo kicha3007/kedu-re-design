@@ -261,11 +261,12 @@ $(document).ready(function()
             $.each(swiperContainersX, function(indx, value){
                 var $this = $(value);
 
-                var swiperContainersXwidth = +$this.get(0).scrollWidth - +$this.get(0).clientWidth;
+                var swiperContainersXwidth = +this.scrollWidth - +this.clientWidth - 30;
+                console.log(swiperContainersXwidth);
 
                 if (swiperContainersXwidth && !$this.hasClass("swiper-container-horizontal") ) {
 
-                    swiper = new Swiper('.swiper-container', {
+                    var swiper = new Swiper('.swiper-container', {
                         scrollbar: {
                             el: '.swiper-scrollbar'
                         },
@@ -273,9 +274,11 @@ $(document).ready(function()
                         slidesPerView: 'auto',
                         // width: 60
                     });
+                } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth && (swiper = $this.swiper)) {
+                    console.log(swiper);
 
-                } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth) {
-                    swiper.destroy();
+                    swiper.destroy(deleteInstance, cleanStyles)
+
                 };
             });
         };
@@ -285,6 +288,7 @@ $(document).ready(function()
         });
 
     })();
+
 
 
     $("[data-to-top-button]").on("click", function () {
