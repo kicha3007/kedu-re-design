@@ -87,6 +87,23 @@
 	background-image: url('#{$base-image-path}/ui/header/bg-default.jpg');
 	color: $white;
 	
+	&__link {
+		color: $white;
+		display: inline-block;
+		position: relative;
+		padding-right: 15px;
+
+		.zmdi-chevron-down {
+			position: absolute;
+			right: -2px;
+			top: 3px;
+		}
+	}
+
+	&__text + .direction-head__link {
+		margin-left: 5px;
+	}
+	
 	&__head {
 		h1 {
 			color: inherit;

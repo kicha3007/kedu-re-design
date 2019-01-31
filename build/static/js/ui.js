@@ -250,6 +250,13 @@ $(document).ready(function()
 
     perfectScrollStart();*/
 
+    var perfectScrollContainersX = $('[data-scroll-wrap-x]'),
+        perfectScrollContainersY = $('[data-scroll-wrap-y]'),
+        PerfectScrollbarElementY,
+        PerfectScrollbarElementX,
+        perfectScrollOuterWrap =  $("[data-scroll-outer-wrap]");
+
+
 
     (function(){
 
@@ -262,7 +269,7 @@ $(document).ready(function()
                 var $this = $(value);
 
                 var swiperContainersXwidth = +this.scrollWidth - +this.clientWidth - 30;
-                console.log(swiperContainersXwidth);
+
 
                 if (swiperContainersXwidth && !$this.hasClass("swiper-container-horizontal") ) {
 
@@ -272,12 +279,16 @@ $(document).ready(function()
                         },
                         freeMode: true,
                         slidesPerView: 'auto',
-                        // width: 60
-                    });
-                } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth && (swiper = $this.swiper)) {
-                    console.log(swiper);
 
-                    swiper.destroy(deleteInstance, cleanStyles)
+                    });
+
+                    perfectScrollOuterWrap.addClass("menu-mobile");
+
+                } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth && (swiper = $this.swiper)) {
+
+
+                    swiper.destroy(deleteInstance, cleanStyles);
+                    perfectScrollOuterWrap.removeClass("menu-mobile");
 
                 };
             });

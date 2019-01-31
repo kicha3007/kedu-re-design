@@ -33,6 +33,9 @@
 .dropdown-blue {
 	&__link {
 		@include dropdown-default($link);
+		.zmdi-chevron-down {
+			margin-top: 3px;
+		}
 	}
 }
 

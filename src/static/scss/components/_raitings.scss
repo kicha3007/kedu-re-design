@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   margin-bottom: 15px;
   overflow: hidden;
+  position: relative;
 }
 
 .raitings__half {
@@ -34,7 +35,8 @@
   @include phones {
     justify-content: flex-start;
     border-right: none;
-    border-bottom: 1px solid $border-default-color;
+    padding: 0;
+
   }
 }
 
@@ -49,6 +51,17 @@
   font-weight: 300;
   margin-bottom: 8px;
   color: $text-progress;
+  @include phones {
+    margin-bottom: 3px;
+  }
+}
+
+.raitings__points {
+  @include phones {
+    position: absolute;
+    right: 20px;
+    top: 17px;
+  }
 }
 
 .raitings__points-text {
@@ -68,6 +81,7 @@
 .raitings__img-box {
   max-width: 47px;
   max-height: 47px;
+  min-height: 46px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -79,8 +93,16 @@
     max-width: 100%;
     flex-basis: 100%;
     margin-bottom: 10px;
+    justify-content: flex-start;
   }
 }
+
+.raitings__img
+   {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
 .raitings__content {
   flex-basis: 150px;
@@ -175,8 +197,6 @@
   @include phones {
     width: 100%;
   }
-
-
 }
 
 .raitings__inner-half--left {
@@ -191,6 +211,9 @@
   padding-right: 20px;
   width: 42%;
   overflow: hidden;
+  @include phones {
+    display: none;
+  }
 }
 
 .raitings__number {
@@ -239,4 +262,20 @@
 
 .raitings__location-text {
   margin-left: 7px;
+}
+
+.raitings__points-numeric--color-1 {
+   color: $card-primary;
+ }
+
+.raitings__points-numeric--color-2 {
+  color: $button-dark-orange;
+}
+
+.raitings__points-numeric--color-3 {
+  color: $text-news-card;
+}
+
+.raitings__points-numeric--color-3 {
+  color: $text-default-link;
 }

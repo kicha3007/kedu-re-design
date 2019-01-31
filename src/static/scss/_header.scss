@@ -92,18 +92,20 @@
 
   .educational {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     margin-bottom: -10px;
     @include link-hover();
   }
 
   .educational__img-box {
-    max-width: 32px;
+    max-width: 30px;
     max-height: 33px;
     width: 100%;
     margin-right: 12px;
     margin-bottom: 10px;
+    @include desktop {
+      display: none;
+    }
   }
 
   .educational__img {
@@ -115,8 +117,11 @@
 
   .educational__text {
     line-height: 1.5;
-    font-size: 11px;
+    font-size: 10px;
     margin-bottom: 10px;
+    @include desktop {
+      font-size: 11px;
+    }
 
   }
 
@@ -715,7 +720,7 @@
       .zmdi-chevron-down {
         position: absolute;
         right: -15px;
-        top: 0;
+        top: 2px;
         transition: 0.1s;
         @include phones {
           top: 2px;
