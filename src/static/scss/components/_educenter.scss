@@ -210,7 +210,7 @@
 
 	a {
 		@include link-hover();
-		
+		font-weight: 700;
 		padding: 12px 22px;
 		position: relative;
 		background: $link-line-solid;
