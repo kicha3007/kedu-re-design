@@ -1,5 +1,8 @@
 // Kedu.ru header styles
 
+
+
+
 #kedu_before_header_menu_frame {
   position: relative;
 }
@@ -757,7 +760,7 @@
 
     &__content {
       display: none;
-      z-index: 2;
+      z-index: 9999;
       width: 100%;
       padding: 0;
       min-height: 90px;
@@ -765,7 +768,9 @@
       top: 100%;
       left: 0;
       background: $bg-content-block;
+      background: red;
 
+   
 
       &-item {
         list-style-type: none;
@@ -826,6 +831,7 @@
       padding-left: 0;
       padding-right: 0;
       position: relative;
+      z-index: 999;
     }
     &__main-wrap.menu-mobile .menu-before__outer-item:last-child {
       padding-right: 15px;
@@ -854,6 +860,7 @@
 
     &__wrap {
       position: relative;
+      overflow: inherit;
     }
 
     &__outer-item {
@@ -915,4 +922,9 @@
 
 
 
+}
+
+.menu-before__main-wrap {
+  z-index: 999;
+  position: relative;
 }
