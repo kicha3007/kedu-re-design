@@ -262,7 +262,7 @@ $(document).ready(function()
                 var $this = $(value);
 
                 var swiperContainersXwidth = +this.scrollWidth - +this.clientWidth - 30;
-                console.log(swiperContainersXwidth);
+
 
                 if (swiperContainersXwidth && !$this.hasClass("swiper-container-horizontal") ) {
 
@@ -275,7 +275,7 @@ $(document).ready(function()
                         // width: 60
                     });
                 } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth && (swiper = $this.swiper)) {
-                    console.log(swiper);
+
 
                     swiper.destroy(deleteInstance, cleanStyles)
 
