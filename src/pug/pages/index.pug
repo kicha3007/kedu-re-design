@@ -14,21 +14,13 @@ html(lang="ru-RU")
         .main-page__wrapper.new-main
             .main-page__content
                 include kedu/header
-                include kedu/raiting-title
-                include kedu/breadcrumbs
-                .container-fluid.direction-parent-directions
-                    .container
-                        .row
-                            .col-xl-5.col-lg-7.direction-parent-directions__links
-                                include kedu/filter
-                            .col-xl-19.col-lg-17
-                                include kedu/raitings
+                include kedu/offer
+                include kedu/sub-nav
+                include kedu/institution-raiting-map
+                include kedu/education-all
+                include kedu/learning-spec
+                include kedu/articel-nav
             include kedu/footer
-
-
-
-
-
         script(src='static/js/jquery-3.3.1.min.js', type='text/javascript')
         script(src='static/js/owl-carousel/owl.carousel.min.js', type='text/javascript')
         script(src='static/js/perfectscrollbar/perfectscrollbar.min.js', type='text/javascript')
